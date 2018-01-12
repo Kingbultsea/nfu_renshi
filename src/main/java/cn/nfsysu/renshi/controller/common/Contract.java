@@ -13,22 +13,23 @@ import org.springframework.web.bind.annotation.RestController;
  * 联系方式相关的接口
  */
 @RestController
+@RequestMapping("/api/common")
 public class Contract {
 
     @Autowired
     ContactInformationMapper contactDao;
 
-    @RequestMapping("/api/common/get-contact-by-id")
+    @RequestMapping("/get-contact-by-id")
     public ContactInformation getAll(int id){
         return contactDao.selectByPrimaryKey(id);
     }
 
-    @RequestMapping("/api/common/add-contact-by-id")
+    @RequestMapping("/add-contact-by-id")
     public String add(ContactInformation con){
         return contactDao.insert(con)==1?"success":"error";
     }
 
-    @RequestMapping("/api/common/update-contact-by-id")
+    @RequestMapping("/update-contact-by-id")
     public String update(ContactInformation con){
         return contactDao.updateByPrimaryKey(con)==1?"success":"error";
     }

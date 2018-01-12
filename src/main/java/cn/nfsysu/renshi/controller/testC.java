@@ -13,28 +13,6 @@ public class testC {
     @Autowired
     InfoMapper infoMapper;
 
-    @RequestMapping("/api/get-info-by-id")
-    public Object test(int id){
-        return infoMapper.selectByPrimaryKey(id);
-    }
-
-    @RequestMapping("/api/add-info-by-all")
-    public String add(Info info){
-
-        System.out.println(info.toString());
-
-        if (infoMapper.insertSelective(info)==1){
-            return "success";
-        }
-        return "error";
-    }
-
-    @RequestMapping("/api/update-by-id")
-    public String update(Info info){
-        if (infoMapper.updateByPrimaryKey(info)==1)
-            return "success";
-        return "error";
-    }
 
     @RequestMapping("/api/delete-by-id")
     public String delete(int id){
