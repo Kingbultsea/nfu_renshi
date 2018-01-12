@@ -32,8 +32,14 @@ public class loginTempImp implements login {
         if (user.getPasswd().equals(passwd)){
             //设置两个cookie    id  密码
             Cookie idcookie = new Cookie("id",String.valueOf(user.getId()));
+            idcookie.setPath("/");
+            idcookie.setMaxAge(60*60*24*30);
+            //idcookie.setDomain("127.0.0.1");
             //密码
             Cookie session = new Cookie("session",user.getPasswd());
+            session.setMaxAge(60*60*24*30);
+            session.setPath("/");
+            //session.setDomain("127.0.0.1");
             response.addCookie(idcookie);
             response.addCookie(session);
             return "success";
