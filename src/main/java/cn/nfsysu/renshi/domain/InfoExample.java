@@ -1,7 +1,6 @@
 package cn.nfsysu.renshi.domain;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class InfoExample {
@@ -335,52 +334,62 @@ public class InfoExample {
             return (Criteria) this;
         }
 
-        public Criteria andSexEqualTo(Integer value) {
+        public Criteria andSexEqualTo(String value) {
             addCriterion("sex =", value, "sex");
             return (Criteria) this;
         }
 
-        public Criteria andSexNotEqualTo(Integer value) {
+        public Criteria andSexNotEqualTo(String value) {
             addCriterion("sex <>", value, "sex");
             return (Criteria) this;
         }
 
-        public Criteria andSexGreaterThan(Integer value) {
+        public Criteria andSexGreaterThan(String value) {
             addCriterion("sex >", value, "sex");
             return (Criteria) this;
         }
 
-        public Criteria andSexGreaterThanOrEqualTo(Integer value) {
+        public Criteria andSexGreaterThanOrEqualTo(String value) {
             addCriterion("sex >=", value, "sex");
             return (Criteria) this;
         }
 
-        public Criteria andSexLessThan(Integer value) {
+        public Criteria andSexLessThan(String value) {
             addCriterion("sex <", value, "sex");
             return (Criteria) this;
         }
 
-        public Criteria andSexLessThanOrEqualTo(Integer value) {
+        public Criteria andSexLessThanOrEqualTo(String value) {
             addCriterion("sex <=", value, "sex");
             return (Criteria) this;
         }
 
-        public Criteria andSexIn(List<Integer> values) {
+        public Criteria andSexLike(String value) {
+            addCriterion("sex like", value, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexNotLike(String value) {
+            addCriterion("sex not like", value, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexIn(List<String> values) {
             addCriterion("sex in", values, "sex");
             return (Criteria) this;
         }
 
-        public Criteria andSexNotIn(List<Integer> values) {
+        public Criteria andSexNotIn(List<String> values) {
             addCriterion("sex not in", values, "sex");
             return (Criteria) this;
         }
 
-        public Criteria andSexBetween(Integer value1, Integer value2) {
+        public Criteria andSexBetween(String value1, String value2) {
             addCriterion("sex between", value1, value2, "sex");
             return (Criteria) this;
         }
 
-        public Criteria andSexNotBetween(Integer value1, Integer value2) {
+        public Criteria andSexNotBetween(String value1, String value2) {
             addCriterion("sex not between", value1, value2, "sex");
             return (Criteria) this;
         }
@@ -675,52 +684,62 @@ public class InfoExample {
             return (Criteria) this;
         }
 
-        public Criteria andBirthDateEqualTo(Date value) {
+        public Criteria andBirthDateEqualTo(String value) {
             addCriterion("birth_date =", value, "birthDate");
             return (Criteria) this;
         }
 
-        public Criteria andBirthDateNotEqualTo(Date value) {
+        public Criteria andBirthDateNotEqualTo(String value) {
             addCriterion("birth_date <>", value, "birthDate");
             return (Criteria) this;
         }
 
-        public Criteria andBirthDateGreaterThan(Date value) {
+        public Criteria andBirthDateGreaterThan(String value) {
             addCriterion("birth_date >", value, "birthDate");
             return (Criteria) this;
         }
 
-        public Criteria andBirthDateGreaterThanOrEqualTo(Date value) {
+        public Criteria andBirthDateGreaterThanOrEqualTo(String value) {
             addCriterion("birth_date >=", value, "birthDate");
             return (Criteria) this;
         }
 
-        public Criteria andBirthDateLessThan(Date value) {
+        public Criteria andBirthDateLessThan(String value) {
             addCriterion("birth_date <", value, "birthDate");
             return (Criteria) this;
         }
 
-        public Criteria andBirthDateLessThanOrEqualTo(Date value) {
+        public Criteria andBirthDateLessThanOrEqualTo(String value) {
             addCriterion("birth_date <=", value, "birthDate");
             return (Criteria) this;
         }
 
-        public Criteria andBirthDateIn(List<Date> values) {
+        public Criteria andBirthDateLike(String value) {
+            addCriterion("birth_date like", value, "birthDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBirthDateNotLike(String value) {
+            addCriterion("birth_date not like", value, "birthDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBirthDateIn(List<String> values) {
             addCriterion("birth_date in", values, "birthDate");
             return (Criteria) this;
         }
 
-        public Criteria andBirthDateNotIn(List<Date> values) {
+        public Criteria andBirthDateNotIn(List<String> values) {
             addCriterion("birth_date not in", values, "birthDate");
             return (Criteria) this;
         }
 
-        public Criteria andBirthDateBetween(Date value1, Date value2) {
+        public Criteria andBirthDateBetween(String value1, String value2) {
             addCriterion("birth_date between", value1, value2, "birthDate");
             return (Criteria) this;
         }
 
-        public Criteria andBirthDateNotBetween(Date value1, Date value2) {
+        public Criteria andBirthDateNotBetween(String value1, String value2) {
             addCriterion("birth_date not between", value1, value2, "birthDate");
             return (Criteria) this;
         }
@@ -1155,52 +1174,62 @@ public class InfoExample {
             return (Criteria) this;
         }
 
-        public Criteria andJoinWorkDateEqualTo(Date value) {
+        public Criteria andJoinWorkDateEqualTo(String value) {
             addCriterion("join_work_date =", value, "joinWorkDate");
             return (Criteria) this;
         }
 
-        public Criteria andJoinWorkDateNotEqualTo(Date value) {
+        public Criteria andJoinWorkDateNotEqualTo(String value) {
             addCriterion("join_work_date <>", value, "joinWorkDate");
             return (Criteria) this;
         }
 
-        public Criteria andJoinWorkDateGreaterThan(Date value) {
+        public Criteria andJoinWorkDateGreaterThan(String value) {
             addCriterion("join_work_date >", value, "joinWorkDate");
             return (Criteria) this;
         }
 
-        public Criteria andJoinWorkDateGreaterThanOrEqualTo(Date value) {
+        public Criteria andJoinWorkDateGreaterThanOrEqualTo(String value) {
             addCriterion("join_work_date >=", value, "joinWorkDate");
             return (Criteria) this;
         }
 
-        public Criteria andJoinWorkDateLessThan(Date value) {
+        public Criteria andJoinWorkDateLessThan(String value) {
             addCriterion("join_work_date <", value, "joinWorkDate");
             return (Criteria) this;
         }
 
-        public Criteria andJoinWorkDateLessThanOrEqualTo(Date value) {
+        public Criteria andJoinWorkDateLessThanOrEqualTo(String value) {
             addCriterion("join_work_date <=", value, "joinWorkDate");
             return (Criteria) this;
         }
 
-        public Criteria andJoinWorkDateIn(List<Date> values) {
+        public Criteria andJoinWorkDateLike(String value) {
+            addCriterion("join_work_date like", value, "joinWorkDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andJoinWorkDateNotLike(String value) {
+            addCriterion("join_work_date not like", value, "joinWorkDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andJoinWorkDateIn(List<String> values) {
             addCriterion("join_work_date in", values, "joinWorkDate");
             return (Criteria) this;
         }
 
-        public Criteria andJoinWorkDateNotIn(List<Date> values) {
+        public Criteria andJoinWorkDateNotIn(List<String> values) {
             addCriterion("join_work_date not in", values, "joinWorkDate");
             return (Criteria) this;
         }
 
-        public Criteria andJoinWorkDateBetween(Date value1, Date value2) {
+        public Criteria andJoinWorkDateBetween(String value1, String value2) {
             addCriterion("join_work_date between", value1, value2, "joinWorkDate");
             return (Criteria) this;
         }
 
-        public Criteria andJoinWorkDateNotBetween(Date value1, Date value2) {
+        public Criteria andJoinWorkDateNotBetween(String value1, String value2) {
             addCriterion("join_work_date not between", value1, value2, "joinWorkDate");
             return (Criteria) this;
         }
@@ -1215,52 +1244,62 @@ public class InfoExample {
             return (Criteria) this;
         }
 
-        public Criteria andJoinSchoolDateEqualTo(Date value) {
+        public Criteria andJoinSchoolDateEqualTo(String value) {
             addCriterion("join_school_date =", value, "joinSchoolDate");
             return (Criteria) this;
         }
 
-        public Criteria andJoinSchoolDateNotEqualTo(Date value) {
+        public Criteria andJoinSchoolDateNotEqualTo(String value) {
             addCriterion("join_school_date <>", value, "joinSchoolDate");
             return (Criteria) this;
         }
 
-        public Criteria andJoinSchoolDateGreaterThan(Date value) {
+        public Criteria andJoinSchoolDateGreaterThan(String value) {
             addCriterion("join_school_date >", value, "joinSchoolDate");
             return (Criteria) this;
         }
 
-        public Criteria andJoinSchoolDateGreaterThanOrEqualTo(Date value) {
+        public Criteria andJoinSchoolDateGreaterThanOrEqualTo(String value) {
             addCriterion("join_school_date >=", value, "joinSchoolDate");
             return (Criteria) this;
         }
 
-        public Criteria andJoinSchoolDateLessThan(Date value) {
+        public Criteria andJoinSchoolDateLessThan(String value) {
             addCriterion("join_school_date <", value, "joinSchoolDate");
             return (Criteria) this;
         }
 
-        public Criteria andJoinSchoolDateLessThanOrEqualTo(Date value) {
+        public Criteria andJoinSchoolDateLessThanOrEqualTo(String value) {
             addCriterion("join_school_date <=", value, "joinSchoolDate");
             return (Criteria) this;
         }
 
-        public Criteria andJoinSchoolDateIn(List<Date> values) {
+        public Criteria andJoinSchoolDateLike(String value) {
+            addCriterion("join_school_date like", value, "joinSchoolDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andJoinSchoolDateNotLike(String value) {
+            addCriterion("join_school_date not like", value, "joinSchoolDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andJoinSchoolDateIn(List<String> values) {
             addCriterion("join_school_date in", values, "joinSchoolDate");
             return (Criteria) this;
         }
 
-        public Criteria andJoinSchoolDateNotIn(List<Date> values) {
+        public Criteria andJoinSchoolDateNotIn(List<String> values) {
             addCriterion("join_school_date not in", values, "joinSchoolDate");
             return (Criteria) this;
         }
 
-        public Criteria andJoinSchoolDateBetween(Date value1, Date value2) {
+        public Criteria andJoinSchoolDateBetween(String value1, String value2) {
             addCriterion("join_school_date between", value1, value2, "joinSchoolDate");
             return (Criteria) this;
         }
 
-        public Criteria andJoinSchoolDateNotBetween(Date value1, Date value2) {
+        public Criteria andJoinSchoolDateNotBetween(String value1, String value2) {
             addCriterion("join_school_date not between", value1, value2, "joinSchoolDate");
             return (Criteria) this;
         }

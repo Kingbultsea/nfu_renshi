@@ -1,7 +1,6 @@
 package cn.nfsysu.renshi.domain;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * @author 
@@ -19,12 +18,12 @@ public class ProfessionalDuties implements Serializable {
     /**
      * 开始时间
      */
-    private Date beginTime;
+    private String beginTime;
 
     /**
      * 解任时间
      */
-    private Date endTime;
+    private String endTime;
 
     /**
      * 单位名称
@@ -62,19 +61,19 @@ public class ProfessionalDuties implements Serializable {
         this.duty = duty;
     }
 
-    public Date getBeginTime() {
+    public String getBeginTime() {
         return beginTime;
     }
 
-    public void setBeginTime(Date beginTime) {
+    public void setBeginTime(String beginTime) {
         this.beginTime = beginTime;
     }
 
-    public Date getEndTime() {
+    public String getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(Date endTime) {
+    public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
 

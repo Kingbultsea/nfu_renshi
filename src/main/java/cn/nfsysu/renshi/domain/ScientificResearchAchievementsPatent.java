@@ -1,7 +1,6 @@
 package cn.nfsysu.renshi.domain;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * @author 
@@ -34,7 +33,7 @@ public class ScientificResearchAchievementsPatent implements Serializable {
     /**
      * 批准日期
      */
-    private Date approveTime;
+    private String approveTime;
 
     /**
      * 本人角色
@@ -96,11 +95,11 @@ public class ScientificResearchAchievementsPatent implements Serializable {
         this.subjectAreas = subjectAreas;
     }
 
-    public Date getApproveTime() {
+    public String getApproveTime() {
         return approveTime;
     }
 
-    public void setApproveTime(Date approveTime) {
+    public void setApproveTime(String approveTime) {
         this.approveTime = approveTime;
     }
 

@@ -1,7 +1,6 @@
 package cn.nfsysu.renshi.domain;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class LearningExperienceExample {
@@ -535,52 +534,62 @@ public class LearningExperienceExample {
             return (Criteria) this;
         }
 
-        public Criteria andBeginTimeEqualTo(Date value) {
+        public Criteria andBeginTimeEqualTo(String value) {
             addCriterion("begin_time =", value, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andBeginTimeNotEqualTo(Date value) {
+        public Criteria andBeginTimeNotEqualTo(String value) {
             addCriterion("begin_time <>", value, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andBeginTimeGreaterThan(Date value) {
+        public Criteria andBeginTimeGreaterThan(String value) {
             addCriterion("begin_time >", value, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andBeginTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andBeginTimeGreaterThanOrEqualTo(String value) {
             addCriterion("begin_time >=", value, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andBeginTimeLessThan(Date value) {
+        public Criteria andBeginTimeLessThan(String value) {
             addCriterion("begin_time <", value, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andBeginTimeLessThanOrEqualTo(Date value) {
+        public Criteria andBeginTimeLessThanOrEqualTo(String value) {
             addCriterion("begin_time <=", value, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andBeginTimeIn(List<Date> values) {
+        public Criteria andBeginTimeLike(String value) {
+            addCriterion("begin_time like", value, "beginTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andBeginTimeNotLike(String value) {
+            addCriterion("begin_time not like", value, "beginTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andBeginTimeIn(List<String> values) {
             addCriterion("begin_time in", values, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andBeginTimeNotIn(List<Date> values) {
+        public Criteria andBeginTimeNotIn(List<String> values) {
             addCriterion("begin_time not in", values, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andBeginTimeBetween(Date value1, Date value2) {
+        public Criteria andBeginTimeBetween(String value1, String value2) {
             addCriterion("begin_time between", value1, value2, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andBeginTimeNotBetween(Date value1, Date value2) {
+        public Criteria andBeginTimeNotBetween(String value1, String value2) {
             addCriterion("begin_time not between", value1, value2, "beginTime");
             return (Criteria) this;
         }
@@ -805,52 +814,62 @@ public class LearningExperienceExample {
             return (Criteria) this;
         }
 
-        public Criteria andDegreeAwardedTimeEqualTo(Date value) {
+        public Criteria andDegreeAwardedTimeEqualTo(String value) {
             addCriterion("degree_awarded_time =", value, "degreeAwardedTime");
             return (Criteria) this;
         }
 
-        public Criteria andDegreeAwardedTimeNotEqualTo(Date value) {
+        public Criteria andDegreeAwardedTimeNotEqualTo(String value) {
             addCriterion("degree_awarded_time <>", value, "degreeAwardedTime");
             return (Criteria) this;
         }
 
-        public Criteria andDegreeAwardedTimeGreaterThan(Date value) {
+        public Criteria andDegreeAwardedTimeGreaterThan(String value) {
             addCriterion("degree_awarded_time >", value, "degreeAwardedTime");
             return (Criteria) this;
         }
 
-        public Criteria andDegreeAwardedTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andDegreeAwardedTimeGreaterThanOrEqualTo(String value) {
             addCriterion("degree_awarded_time >=", value, "degreeAwardedTime");
             return (Criteria) this;
         }
 
-        public Criteria andDegreeAwardedTimeLessThan(Date value) {
+        public Criteria andDegreeAwardedTimeLessThan(String value) {
             addCriterion("degree_awarded_time <", value, "degreeAwardedTime");
             return (Criteria) this;
         }
 
-        public Criteria andDegreeAwardedTimeLessThanOrEqualTo(Date value) {
+        public Criteria andDegreeAwardedTimeLessThanOrEqualTo(String value) {
             addCriterion("degree_awarded_time <=", value, "degreeAwardedTime");
             return (Criteria) this;
         }
 
-        public Criteria andDegreeAwardedTimeIn(List<Date> values) {
+        public Criteria andDegreeAwardedTimeLike(String value) {
+            addCriterion("degree_awarded_time like", value, "degreeAwardedTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDegreeAwardedTimeNotLike(String value) {
+            addCriterion("degree_awarded_time not like", value, "degreeAwardedTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDegreeAwardedTimeIn(List<String> values) {
             addCriterion("degree_awarded_time in", values, "degreeAwardedTime");
             return (Criteria) this;
         }
 
-        public Criteria andDegreeAwardedTimeNotIn(List<Date> values) {
+        public Criteria andDegreeAwardedTimeNotIn(List<String> values) {
             addCriterion("degree_awarded_time not in", values, "degreeAwardedTime");
             return (Criteria) this;
         }
 
-        public Criteria andDegreeAwardedTimeBetween(Date value1, Date value2) {
+        public Criteria andDegreeAwardedTimeBetween(String value1, String value2) {
             addCriterion("degree_awarded_time between", value1, value2, "degreeAwardedTime");
             return (Criteria) this;
         }
 
-        public Criteria andDegreeAwardedTimeNotBetween(Date value1, Date value2) {
+        public Criteria andDegreeAwardedTimeNotBetween(String value1, String value2) {
             addCriterion("degree_awarded_time not between", value1, value2, "degreeAwardedTime");
             return (Criteria) this;
         }

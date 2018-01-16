@@ -1,7 +1,6 @@
 package cn.nfsysu.renshi.domain;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * @author 
@@ -22,7 +21,7 @@ public class Info implements Serializable {
     /**
      * 性别
      */
-    private Integer sex;
+    private String sex;
 
     /**
      * 教职工号
@@ -47,7 +46,7 @@ public class Info implements Serializable {
     /**
      * 出生日期
      */
-    private Date birthDate;
+    private String birthDate;
 
     /**
      * 籍贯
@@ -82,12 +81,12 @@ public class Info implements Serializable {
     /**
      * 参加工作日期
      */
-    private Date joinWorkDate;
+    private String joinWorkDate;
 
     /**
      * 加入本校时期
      */
-    private Date joinSchoolDate;
+    private String joinSchoolDate;
 
     /**
      * 教职工来源
@@ -155,11 +154,11 @@ public class Info implements Serializable {
         this.oldName = oldName;
     }
 
-    public Integer getSex() {
+    public String getSex() {
         return sex;
     }
 
-    public void setSex(Integer sex) {
+    public void setSex(String sex) {
         this.sex = sex;
     }
 
@@ -195,11 +194,11 @@ public class Info implements Serializable {
         this.idCardNumber = idCardNumber;
     }
 
-    public Date getBirthDate() {
+    public String getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
 
@@ -251,19 +250,19 @@ public class Info implements Serializable {
         this.healthStatus = healthStatus;
     }
 
-    public Date getJoinWorkDate() {
+    public String getJoinWorkDate() {
         return joinWorkDate;
     }
 
-    public void setJoinWorkDate(Date joinWorkDate) {
+    public void setJoinWorkDate(String joinWorkDate) {
         this.joinWorkDate = joinWorkDate;
     }
 
-    public Date getJoinSchoolDate() {
+    public String getJoinSchoolDate() {
         return joinSchoolDate;
     }
 
-    public void setJoinSchoolDate(Date joinSchoolDate) {
+    public void setJoinSchoolDate(String joinSchoolDate) {
         this.joinSchoolDate = joinSchoolDate;
     }
 

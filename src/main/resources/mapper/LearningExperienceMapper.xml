@@ -8,11 +8,11 @@
     <result column="country" jdbcType="VARCHAR" property="country" />
     <result column="university" jdbcType="VARCHAR" property="university" />
     <result column="majors" jdbcType="VARCHAR" property="majors" />
-    <result column="begin_time" jdbcType="TIMESTAMP" property="beginTime" />
+    <result column="begin_time" jdbcType="VARCHAR" property="beginTime" />
     <result column="end_time" jdbcType="VARCHAR" property="endTime" />
     <result column="degree" jdbcType="VARCHAR" property="degree" />
     <result column="degree_name" jdbcType="VARCHAR" property="degreeName" />
-    <result column="degree_awarded_time" jdbcType="TIMESTAMP" property="degreeAwardedTime" />
+    <result column="degree_awarded_time" jdbcType="VARCHAR" property="degreeAwardedTime" />
     <result column="learning_style" jdbcType="VARCHAR" property="learningStyle" />
     <result column="school_classes" jdbcType="VARCHAR" property="schoolClasses" />
   </resultMap>
@@ -126,9 +126,9 @@
       degree_awarded_time, learning_style, school_classes
       )
     values (#{father,jdbcType=INTEGER}, #{educational,jdbcType=VARCHAR}, #{country,jdbcType=VARCHAR}, 
-      #{university,jdbcType=VARCHAR}, #{majors,jdbcType=VARCHAR}, #{beginTime,jdbcType=TIMESTAMP}, 
+      #{university,jdbcType=VARCHAR}, #{majors,jdbcType=VARCHAR}, #{beginTime,jdbcType=VARCHAR}, 
       #{endTime,jdbcType=VARCHAR}, #{degree,jdbcType=VARCHAR}, #{degreeName,jdbcType=VARCHAR}, 
-      #{degreeAwardedTime,jdbcType=TIMESTAMP}, #{learningStyle,jdbcType=VARCHAR}, #{schoolClasses,jdbcType=VARCHAR}
+      #{degreeAwardedTime,jdbcType=VARCHAR}, #{learningStyle,jdbcType=VARCHAR}, #{schoolClasses,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="cn.nfsysu.renshi.domain.LearningExperience">
@@ -191,7 +191,7 @@
         #{majors,jdbcType=VARCHAR},
       </if>
       <if test="beginTime != null">
-        #{beginTime,jdbcType=TIMESTAMP},
+        #{beginTime,jdbcType=VARCHAR},
       </if>
       <if test="endTime != null">
         #{endTime,jdbcType=VARCHAR},
@@ -203,7 +203,7 @@
         #{degreeName,jdbcType=VARCHAR},
       </if>
       <if test="degreeAwardedTime != null">
-        #{degreeAwardedTime,jdbcType=TIMESTAMP},
+        #{degreeAwardedTime,jdbcType=VARCHAR},
       </if>
       <if test="learningStyle != null">
         #{learningStyle,jdbcType=VARCHAR},
@@ -241,7 +241,7 @@
         majors = #{record.majors,jdbcType=VARCHAR},
       </if>
       <if test="record.beginTime != null">
-        begin_time = #{record.beginTime,jdbcType=TIMESTAMP},
+        begin_time = #{record.beginTime,jdbcType=VARCHAR},
       </if>
       <if test="record.endTime != null">
         end_time = #{record.endTime,jdbcType=VARCHAR},
@@ -253,7 +253,7 @@
         degree_name = #{record.degreeName,jdbcType=VARCHAR},
       </if>
       <if test="record.degreeAwardedTime != null">
-        degree_awarded_time = #{record.degreeAwardedTime,jdbcType=TIMESTAMP},
+        degree_awarded_time = #{record.degreeAwardedTime,jdbcType=VARCHAR},
       </if>
       <if test="record.learningStyle != null">
         learning_style = #{record.learningStyle,jdbcType=VARCHAR},
@@ -274,11 +274,11 @@
       country = #{record.country,jdbcType=VARCHAR},
       university = #{record.university,jdbcType=VARCHAR},
       majors = #{record.majors,jdbcType=VARCHAR},
-      begin_time = #{record.beginTime,jdbcType=TIMESTAMP},
+      begin_time = #{record.beginTime,jdbcType=VARCHAR},
       end_time = #{record.endTime,jdbcType=VARCHAR},
       degree = #{record.degree,jdbcType=VARCHAR},
       degree_name = #{record.degreeName,jdbcType=VARCHAR},
-      degree_awarded_time = #{record.degreeAwardedTime,jdbcType=TIMESTAMP},
+      degree_awarded_time = #{record.degreeAwardedTime,jdbcType=VARCHAR},
       learning_style = #{record.learningStyle,jdbcType=VARCHAR},
       school_classes = #{record.schoolClasses,jdbcType=VARCHAR}
     <if test="_parameter != null">
@@ -304,7 +304,7 @@
         majors = #{majors,jdbcType=VARCHAR},
       </if>
       <if test="beginTime != null">
-        begin_time = #{beginTime,jdbcType=TIMESTAMP},
+        begin_time = #{beginTime,jdbcType=VARCHAR},
       </if>
       <if test="endTime != null">
         end_time = #{endTime,jdbcType=VARCHAR},
@@ -316,7 +316,7 @@
         degree_name = #{degreeName,jdbcType=VARCHAR},
       </if>
       <if test="degreeAwardedTime != null">
-        degree_awarded_time = #{degreeAwardedTime,jdbcType=TIMESTAMP},
+        degree_awarded_time = #{degreeAwardedTime,jdbcType=VARCHAR},
       </if>
       <if test="learningStyle != null">
         learning_style = #{learningStyle,jdbcType=VARCHAR},
@@ -334,11 +334,11 @@
       country = #{country,jdbcType=VARCHAR},
       university = #{university,jdbcType=VARCHAR},
       majors = #{majors,jdbcType=VARCHAR},
-      begin_time = #{beginTime,jdbcType=TIMESTAMP},
+      begin_time = #{beginTime,jdbcType=VARCHAR},
       end_time = #{endTime,jdbcType=VARCHAR},
       degree = #{degree,jdbcType=VARCHAR},
       degree_name = #{degreeName,jdbcType=VARCHAR},
-      degree_awarded_time = #{degreeAwardedTime,jdbcType=TIMESTAMP},
+      degree_awarded_time = #{degreeAwardedTime,jdbcType=VARCHAR},
       learning_style = #{learningStyle,jdbcType=VARCHAR},
       school_classes = #{schoolClasses,jdbcType=VARCHAR}
     where Id = #{id,jdbcType=INTEGER}

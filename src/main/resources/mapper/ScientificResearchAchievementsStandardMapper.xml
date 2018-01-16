@@ -7,7 +7,7 @@
     <result column="standard_nubmer" jdbcType="VARCHAR" property="standardNubmer" />
     <result column="is_representativeness" jdbcType="VARCHAR" property="isRepresentativeness" />
     <result column="self_role" jdbcType="VARCHAR" property="selfRole" />
-    <result column="release_date" jdbcType="TIMESTAMP" property="releaseDate" />
+    <result column="release_date" jdbcType="VARCHAR" property="releaseDate" />
     <result column="unit_name" jdbcType="VARCHAR" property="unitName" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -117,7 +117,7 @@
       self_role, release_date, unit_name
       )
     values (#{father,jdbcType=INTEGER}, #{standardNubmer,jdbcType=VARCHAR}, #{isRepresentativeness,jdbcType=VARCHAR}, 
-      #{selfRole,jdbcType=VARCHAR}, #{releaseDate,jdbcType=TIMESTAMP}, #{unitName,jdbcType=VARCHAR}
+      #{selfRole,jdbcType=VARCHAR}, #{releaseDate,jdbcType=VARCHAR}, #{unitName,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="cn.nfsysu.renshi.domain.ScientificResearchAchievementsStandard">
@@ -159,7 +159,7 @@
         #{selfRole,jdbcType=VARCHAR},
       </if>
       <if test="releaseDate != null">
-        #{releaseDate,jdbcType=TIMESTAMP},
+        #{releaseDate,jdbcType=VARCHAR},
       </if>
       <if test="unitName != null">
         #{unitName,jdbcType=VARCHAR},
@@ -191,7 +191,7 @@
         self_role = #{record.selfRole,jdbcType=VARCHAR},
       </if>
       <if test="record.releaseDate != null">
-        release_date = #{record.releaseDate,jdbcType=TIMESTAMP},
+        release_date = #{record.releaseDate,jdbcType=VARCHAR},
       </if>
       <if test="record.unitName != null">
         unit_name = #{record.unitName,jdbcType=VARCHAR},
@@ -208,7 +208,7 @@
       standard_nubmer = #{record.standardNubmer,jdbcType=VARCHAR},
       is_representativeness = #{record.isRepresentativeness,jdbcType=VARCHAR},
       self_role = #{record.selfRole,jdbcType=VARCHAR},
-      release_date = #{record.releaseDate,jdbcType=TIMESTAMP},
+      release_date = #{record.releaseDate,jdbcType=VARCHAR},
       unit_name = #{record.unitName,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -230,7 +230,7 @@
         self_role = #{selfRole,jdbcType=VARCHAR},
       </if>
       <if test="releaseDate != null">
-        release_date = #{releaseDate,jdbcType=TIMESTAMP},
+        release_date = #{releaseDate,jdbcType=VARCHAR},
       </if>
       <if test="unitName != null">
         unit_name = #{unitName,jdbcType=VARCHAR},
@@ -244,7 +244,7 @@
       standard_nubmer = #{standardNubmer,jdbcType=VARCHAR},
       is_representativeness = #{isRepresentativeness,jdbcType=VARCHAR},
       self_role = #{selfRole,jdbcType=VARCHAR},
-      release_date = #{releaseDate,jdbcType=TIMESTAMP},
+      release_date = #{releaseDate,jdbcType=VARCHAR},
       unit_name = #{unitName,jdbcType=VARCHAR}
     where Id = #{id,jdbcType=INTEGER}
   </update>

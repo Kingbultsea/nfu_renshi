@@ -1,7 +1,6 @@
 package cn.nfsysu.renshi.domain;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class ScientificResearchAchievementsPatentExample {
@@ -535,52 +534,62 @@ public class ScientificResearchAchievementsPatentExample {
             return (Criteria) this;
         }
 
-        public Criteria andApproveTimeEqualTo(Date value) {
+        public Criteria andApproveTimeEqualTo(String value) {
             addCriterion("approve_time =", value, "approveTime");
             return (Criteria) this;
         }
 
-        public Criteria andApproveTimeNotEqualTo(Date value) {
+        public Criteria andApproveTimeNotEqualTo(String value) {
             addCriterion("approve_time <>", value, "approveTime");
             return (Criteria) this;
         }
 
-        public Criteria andApproveTimeGreaterThan(Date value) {
+        public Criteria andApproveTimeGreaterThan(String value) {
             addCriterion("approve_time >", value, "approveTime");
             return (Criteria) this;
         }
 
-        public Criteria andApproveTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andApproveTimeGreaterThanOrEqualTo(String value) {
             addCriterion("approve_time >=", value, "approveTime");
             return (Criteria) this;
         }
 
-        public Criteria andApproveTimeLessThan(Date value) {
+        public Criteria andApproveTimeLessThan(String value) {
             addCriterion("approve_time <", value, "approveTime");
             return (Criteria) this;
         }
 
-        public Criteria andApproveTimeLessThanOrEqualTo(Date value) {
+        public Criteria andApproveTimeLessThanOrEqualTo(String value) {
             addCriterion("approve_time <=", value, "approveTime");
             return (Criteria) this;
         }
 
-        public Criteria andApproveTimeIn(List<Date> values) {
+        public Criteria andApproveTimeLike(String value) {
+            addCriterion("approve_time like", value, "approveTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andApproveTimeNotLike(String value) {
+            addCriterion("approve_time not like", value, "approveTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andApproveTimeIn(List<String> values) {
             addCriterion("approve_time in", values, "approveTime");
             return (Criteria) this;
         }
 
-        public Criteria andApproveTimeNotIn(List<Date> values) {
+        public Criteria andApproveTimeNotIn(List<String> values) {
             addCriterion("approve_time not in", values, "approveTime");
             return (Criteria) this;
         }
 
-        public Criteria andApproveTimeBetween(Date value1, Date value2) {
+        public Criteria andApproveTimeBetween(String value1, String value2) {
             addCriterion("approve_time between", value1, value2, "approveTime");
             return (Criteria) this;
         }
 
-        public Criteria andApproveTimeNotBetween(Date value1, Date value2) {
+        public Criteria andApproveTimeNotBetween(String value1, String value2) {
             addCriterion("approve_time not between", value1, value2, "approveTime");
             return (Criteria) this;
         }

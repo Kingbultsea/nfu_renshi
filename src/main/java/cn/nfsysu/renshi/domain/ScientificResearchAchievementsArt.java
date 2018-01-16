@@ -1,7 +1,6 @@
 package cn.nfsysu.renshi.domain;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * @author 
@@ -34,7 +33,7 @@ public class ScientificResearchAchievementsArt implements Serializable {
     /**
      * 完成时间
      */
-    private Date completeTime;
+    private String completeTime;
 
     /**
      * 完成地点
@@ -96,11 +95,11 @@ public class ScientificResearchAchievementsArt implements Serializable {
         this.selfRole = selfRole;
     }
 
-    public Date getCompleteTime() {
+    public String getCompleteTime() {
         return completeTime;
     }
 
-    public void setCompleteTime(Date completeTime) {
+    public void setCompleteTime(String completeTime) {
         this.completeTime = completeTime;
     }
 

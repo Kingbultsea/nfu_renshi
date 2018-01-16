@@ -1,7 +1,6 @@
 package cn.nfsysu.renshi.domain;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class ScientificResearchAchievementsArtExample {
@@ -535,52 +534,62 @@ public class ScientificResearchAchievementsArtExample {
             return (Criteria) this;
         }
 
-        public Criteria andCompleteTimeEqualTo(Date value) {
+        public Criteria andCompleteTimeEqualTo(String value) {
             addCriterion("complete_time =", value, "completeTime");
             return (Criteria) this;
         }
 
-        public Criteria andCompleteTimeNotEqualTo(Date value) {
+        public Criteria andCompleteTimeNotEqualTo(String value) {
             addCriterion("complete_time <>", value, "completeTime");
             return (Criteria) this;
         }
 
-        public Criteria andCompleteTimeGreaterThan(Date value) {
+        public Criteria andCompleteTimeGreaterThan(String value) {
             addCriterion("complete_time >", value, "completeTime");
             return (Criteria) this;
         }
 
-        public Criteria andCompleteTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andCompleteTimeGreaterThanOrEqualTo(String value) {
             addCriterion("complete_time >=", value, "completeTime");
             return (Criteria) this;
         }
 
-        public Criteria andCompleteTimeLessThan(Date value) {
+        public Criteria andCompleteTimeLessThan(String value) {
             addCriterion("complete_time <", value, "completeTime");
             return (Criteria) this;
         }
 
-        public Criteria andCompleteTimeLessThanOrEqualTo(Date value) {
+        public Criteria andCompleteTimeLessThanOrEqualTo(String value) {
             addCriterion("complete_time <=", value, "completeTime");
             return (Criteria) this;
         }
 
-        public Criteria andCompleteTimeIn(List<Date> values) {
+        public Criteria andCompleteTimeLike(String value) {
+            addCriterion("complete_time like", value, "completeTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCompleteTimeNotLike(String value) {
+            addCriterion("complete_time not like", value, "completeTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCompleteTimeIn(List<String> values) {
             addCriterion("complete_time in", values, "completeTime");
             return (Criteria) this;
         }
 
-        public Criteria andCompleteTimeNotIn(List<Date> values) {
+        public Criteria andCompleteTimeNotIn(List<String> values) {
             addCriterion("complete_time not in", values, "completeTime");
             return (Criteria) this;
         }
 
-        public Criteria andCompleteTimeBetween(Date value1, Date value2) {
+        public Criteria andCompleteTimeBetween(String value1, String value2) {
             addCriterion("complete_time between", value1, value2, "completeTime");
             return (Criteria) this;
         }
 
-        public Criteria andCompleteTimeNotBetween(Date value1, Date value2) {
+        public Criteria andCompleteTimeNotBetween(String value1, String value2) {
             addCriterion("complete_time not between", value1, value2, "completeTime");
             return (Criteria) this;
         }

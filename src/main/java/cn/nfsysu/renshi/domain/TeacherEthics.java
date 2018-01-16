@@ -1,7 +1,6 @@
 package cn.nfsysu.renshi.domain;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * @author 
@@ -24,7 +23,7 @@ public class TeacherEthics implements Serializable {
     /**
      * 时间
      */
-    private Date honorTime;
+    private String honorTime;
 
     /**
      * 荣誉描述
@@ -70,11 +69,11 @@ public class TeacherEthics implements Serializable {
         this.honorName = honorName;
     }
 
-    public Date getHonorTime() {
+    public String getHonorTime() {
         return honorTime;
     }
 
-    public void setHonorTime(Date honorTime) {
+    public void setHonorTime(String honorTime) {
         this.honorTime = honorTime;
     }
 

@@ -1,7 +1,6 @@
 package cn.nfsysu.renshi.domain;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * @author 
@@ -29,7 +28,7 @@ public class ScientificResearchAchievementsStudy implements Serializable {
     /**
      * 报告时间
      */
-    private Date reportTime;
+    private String reportTime;
 
     /**
      * 委托方
@@ -78,11 +77,11 @@ public class ScientificResearchAchievementsStudy implements Serializable {
         this.selfRole = selfRole;
     }
 
-    public Date getReportTime() {
+    public String getReportTime() {
         return reportTime;
     }
 
-    public void setReportTime(Date reportTime) {
+    public void setReportTime(String reportTime) {
         this.reportTime = reportTime;
     }
 

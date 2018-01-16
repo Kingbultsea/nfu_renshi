@@ -8,7 +8,7 @@
     <result column="is_representativeness" jdbcType="VARCHAR" property="isRepresentativeness" />
     <result column="writings_name" jdbcType="VARCHAR" property="writingsName" />
     <result column="subject_areas" jdbcType="VARCHAR" property="subjectAreas" />
-    <result column="publication_date" jdbcType="TIMESTAMP" property="publicationDate" />
+    <result column="publication_date" jdbcType="VARCHAR" property="publicationDate" />
     <result column="publication_name" jdbcType="VARCHAR" property="publicationName" />
     <result column="numbers" jdbcType="VARCHAR" property="numbers" />
     <result column="self_role" jdbcType="VARCHAR" property="selfRole" />
@@ -124,7 +124,7 @@
       publication_name, numbers, self_role, 
       total_words, self_words)
     values (#{father,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{isRepresentativeness,jdbcType=VARCHAR}, 
-      #{writingsName,jdbcType=VARCHAR}, #{subjectAreas,jdbcType=VARCHAR}, #{publicationDate,jdbcType=TIMESTAMP}, 
+      #{writingsName,jdbcType=VARCHAR}, #{subjectAreas,jdbcType=VARCHAR}, #{publicationDate,jdbcType=VARCHAR}, 
       #{publicationName,jdbcType=VARCHAR}, #{numbers,jdbcType=VARCHAR}, #{selfRole,jdbcType=VARCHAR}, 
       #{totalWords,jdbcType=INTEGER}, #{selfWords,jdbcType=VARCHAR})
   </insert>
@@ -185,7 +185,7 @@
         #{subjectAreas,jdbcType=VARCHAR},
       </if>
       <if test="publicationDate != null">
-        #{publicationDate,jdbcType=TIMESTAMP},
+        #{publicationDate,jdbcType=VARCHAR},
       </if>
       <if test="publicationName != null">
         #{publicationName,jdbcType=VARCHAR},
@@ -232,7 +232,7 @@
         subject_areas = #{record.subjectAreas,jdbcType=VARCHAR},
       </if>
       <if test="record.publicationDate != null">
-        publication_date = #{record.publicationDate,jdbcType=TIMESTAMP},
+        publication_date = #{record.publicationDate,jdbcType=VARCHAR},
       </if>
       <if test="record.publicationName != null">
         publication_name = #{record.publicationName,jdbcType=VARCHAR},
@@ -262,7 +262,7 @@
       is_representativeness = #{record.isRepresentativeness,jdbcType=VARCHAR},
       writings_name = #{record.writingsName,jdbcType=VARCHAR},
       subject_areas = #{record.subjectAreas,jdbcType=VARCHAR},
-      publication_date = #{record.publicationDate,jdbcType=TIMESTAMP},
+      publication_date = #{record.publicationDate,jdbcType=VARCHAR},
       publication_name = #{record.publicationName,jdbcType=VARCHAR},
       numbers = #{record.numbers,jdbcType=VARCHAR},
       self_role = #{record.selfRole,jdbcType=VARCHAR},
@@ -291,7 +291,7 @@
         subject_areas = #{subjectAreas,jdbcType=VARCHAR},
       </if>
       <if test="publicationDate != null">
-        publication_date = #{publicationDate,jdbcType=TIMESTAMP},
+        publication_date = #{publicationDate,jdbcType=VARCHAR},
       </if>
       <if test="publicationName != null">
         publication_name = #{publicationName,jdbcType=VARCHAR},
@@ -318,7 +318,7 @@
       is_representativeness = #{isRepresentativeness,jdbcType=VARCHAR},
       writings_name = #{writingsName,jdbcType=VARCHAR},
       subject_areas = #{subjectAreas,jdbcType=VARCHAR},
-      publication_date = #{publicationDate,jdbcType=TIMESTAMP},
+      publication_date = #{publicationDate,jdbcType=VARCHAR},
       publication_name = #{publicationName,jdbcType=VARCHAR},
       numbers = #{numbers,jdbcType=VARCHAR},
       self_role = #{selfRole,jdbcType=VARCHAR},

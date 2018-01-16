@@ -1,7 +1,6 @@
 package cn.nfsysu.renshi.domain;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * @author 
@@ -44,12 +43,12 @@ public class ScientificResearchAchievementsProject implements Serializable {
     /**
      * 开始年月
      */
-    private Date beginTime;
+    private String beginTime;
 
     /**
      * 结束年月
      */
-    private Date endTime;
+    private String endTime;
 
     /**
      * 本人角色
@@ -137,19 +136,19 @@ public class ScientificResearchAchievementsProject implements Serializable {
         this.funding = funding;
     }
 
-    public Date getBeginTime() {
+    public String getBeginTime() {
         return beginTime;
     }
 
-    public void setBeginTime(Date beginTime) {
+    public void setBeginTime(String beginTime) {
         this.beginTime = beginTime;
     }
 
-    public Date getEndTime() {
+    public String getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(Date endTime) {
+    public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
 

@@ -4,7 +4,7 @@
   <resultMap id="BaseResultMap" type="cn.nfsysu.renshi.domain.OverseasTraining">
     <id column="Id" jdbcType="INTEGER" property="id" />
     <result column="is_has_experience" jdbcType="VARCHAR" property="isHasExperience" />
-    <result column="begin_time" jdbcType="TIMESTAMP" property="beginTime" />
+    <result column="begin_time" jdbcType="VARCHAR" property="beginTime" />
     <result column="end_time" jdbcType="VARCHAR" property="endTime" />
     <result column="country" jdbcType="VARCHAR" property="country" />
     <result column="organization_name" jdbcType="VARCHAR" property="organizationName" />
@@ -118,7 +118,7 @@
     insert into overseas_training (is_has_experience, begin_time, end_time, 
       country, organization_name, project_name, 
       organizational_unit)
-    values (#{isHasExperience,jdbcType=VARCHAR}, #{beginTime,jdbcType=TIMESTAMP}, #{endTime,jdbcType=VARCHAR}, 
+    values (#{isHasExperience,jdbcType=VARCHAR}, #{beginTime,jdbcType=VARCHAR}, #{endTime,jdbcType=VARCHAR}, 
       #{country,jdbcType=VARCHAR}, #{organizationName,jdbcType=VARCHAR}, #{projectName,jdbcType=VARCHAR}, 
       #{organizationalUnit,jdbcType=VARCHAR})
   </insert>
@@ -155,7 +155,7 @@
         #{isHasExperience,jdbcType=VARCHAR},
       </if>
       <if test="beginTime != null">
-        #{beginTime,jdbcType=TIMESTAMP},
+        #{beginTime,jdbcType=VARCHAR},
       </if>
       <if test="endTime != null">
         #{endTime,jdbcType=VARCHAR},
@@ -190,7 +190,7 @@
         is_has_experience = #{record.isHasExperience,jdbcType=VARCHAR},
       </if>
       <if test="record.beginTime != null">
-        begin_time = #{record.beginTime,jdbcType=TIMESTAMP},
+        begin_time = #{record.beginTime,jdbcType=VARCHAR},
       </if>
       <if test="record.endTime != null">
         end_time = #{record.endTime,jdbcType=VARCHAR},
@@ -216,7 +216,7 @@
     update overseas_training
     set Id = #{record.id,jdbcType=INTEGER},
       is_has_experience = #{record.isHasExperience,jdbcType=VARCHAR},
-      begin_time = #{record.beginTime,jdbcType=TIMESTAMP},
+      begin_time = #{record.beginTime,jdbcType=VARCHAR},
       end_time = #{record.endTime,jdbcType=VARCHAR},
       country = #{record.country,jdbcType=VARCHAR},
       organization_name = #{record.organizationName,jdbcType=VARCHAR},
@@ -233,7 +233,7 @@
         is_has_experience = #{isHasExperience,jdbcType=VARCHAR},
       </if>
       <if test="beginTime != null">
-        begin_time = #{beginTime,jdbcType=TIMESTAMP},
+        begin_time = #{beginTime,jdbcType=VARCHAR},
       </if>
       <if test="endTime != null">
         end_time = #{endTime,jdbcType=VARCHAR},
@@ -256,7 +256,7 @@
   <update id="updateByPrimaryKey" parameterType="cn.nfsysu.renshi.domain.OverseasTraining">
     update overseas_training
     set is_has_experience = #{isHasExperience,jdbcType=VARCHAR},
-      begin_time = #{beginTime,jdbcType=TIMESTAMP},
+      begin_time = #{beginTime,jdbcType=VARCHAR},
       end_time = #{endTime,jdbcType=VARCHAR},
       country = #{country,jdbcType=VARCHAR},
       organization_name = #{organizationName,jdbcType=VARCHAR},

@@ -1,7 +1,6 @@
 package cn.nfsysu.renshi.domain;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class ScientificResearchAchievementsWritingsExample {
@@ -535,52 +534,62 @@ public class ScientificResearchAchievementsWritingsExample {
             return (Criteria) this;
         }
 
-        public Criteria andPublicationDateEqualTo(Date value) {
+        public Criteria andPublicationDateEqualTo(String value) {
             addCriterion("publication_date =", value, "publicationDate");
             return (Criteria) this;
         }
 
-        public Criteria andPublicationDateNotEqualTo(Date value) {
+        public Criteria andPublicationDateNotEqualTo(String value) {
             addCriterion("publication_date <>", value, "publicationDate");
             return (Criteria) this;
         }
 
-        public Criteria andPublicationDateGreaterThan(Date value) {
+        public Criteria andPublicationDateGreaterThan(String value) {
             addCriterion("publication_date >", value, "publicationDate");
             return (Criteria) this;
         }
 
-        public Criteria andPublicationDateGreaterThanOrEqualTo(Date value) {
+        public Criteria andPublicationDateGreaterThanOrEqualTo(String value) {
             addCriterion("publication_date >=", value, "publicationDate");
             return (Criteria) this;
         }
 
-        public Criteria andPublicationDateLessThan(Date value) {
+        public Criteria andPublicationDateLessThan(String value) {
             addCriterion("publication_date <", value, "publicationDate");
             return (Criteria) this;
         }
 
-        public Criteria andPublicationDateLessThanOrEqualTo(Date value) {
+        public Criteria andPublicationDateLessThanOrEqualTo(String value) {
             addCriterion("publication_date <=", value, "publicationDate");
             return (Criteria) this;
         }
 
-        public Criteria andPublicationDateIn(List<Date> values) {
+        public Criteria andPublicationDateLike(String value) {
+            addCriterion("publication_date like", value, "publicationDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andPublicationDateNotLike(String value) {
+            addCriterion("publication_date not like", value, "publicationDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andPublicationDateIn(List<String> values) {
             addCriterion("publication_date in", values, "publicationDate");
             return (Criteria) this;
         }
 
-        public Criteria andPublicationDateNotIn(List<Date> values) {
+        public Criteria andPublicationDateNotIn(List<String> values) {
             addCriterion("publication_date not in", values, "publicationDate");
             return (Criteria) this;
         }
 
-        public Criteria andPublicationDateBetween(Date value1, Date value2) {
+        public Criteria andPublicationDateBetween(String value1, String value2) {
             addCriterion("publication_date between", value1, value2, "publicationDate");
             return (Criteria) this;
         }
 
-        public Criteria andPublicationDateNotBetween(Date value1, Date value2) {
+        public Criteria andPublicationDateNotBetween(String value1, String value2) {
             addCriterion("publication_date not between", value1, value2, "publicationDate");
             return (Criteria) this;
         }

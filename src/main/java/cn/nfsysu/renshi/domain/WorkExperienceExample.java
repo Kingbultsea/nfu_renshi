@@ -1,7 +1,6 @@
 package cn.nfsysu.renshi.domain;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class WorkExperienceExample {
@@ -325,52 +324,62 @@ public class WorkExperienceExample {
             return (Criteria) this;
         }
 
-        public Criteria andBeginTimeEqualTo(Date value) {
+        public Criteria andBeginTimeEqualTo(String value) {
             addCriterion("begin_time =", value, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andBeginTimeNotEqualTo(Date value) {
+        public Criteria andBeginTimeNotEqualTo(String value) {
             addCriterion("begin_time <>", value, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andBeginTimeGreaterThan(Date value) {
+        public Criteria andBeginTimeGreaterThan(String value) {
             addCriterion("begin_time >", value, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andBeginTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andBeginTimeGreaterThanOrEqualTo(String value) {
             addCriterion("begin_time >=", value, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andBeginTimeLessThan(Date value) {
+        public Criteria andBeginTimeLessThan(String value) {
             addCriterion("begin_time <", value, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andBeginTimeLessThanOrEqualTo(Date value) {
+        public Criteria andBeginTimeLessThanOrEqualTo(String value) {
             addCriterion("begin_time <=", value, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andBeginTimeIn(List<Date> values) {
+        public Criteria andBeginTimeLike(String value) {
+            addCriterion("begin_time like", value, "beginTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andBeginTimeNotLike(String value) {
+            addCriterion("begin_time not like", value, "beginTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andBeginTimeIn(List<String> values) {
             addCriterion("begin_time in", values, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andBeginTimeNotIn(List<Date> values) {
+        public Criteria andBeginTimeNotIn(List<String> values) {
             addCriterion("begin_time not in", values, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andBeginTimeBetween(Date value1, Date value2) {
+        public Criteria andBeginTimeBetween(String value1, String value2) {
             addCriterion("begin_time between", value1, value2, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andBeginTimeNotBetween(Date value1, Date value2) {
+        public Criteria andBeginTimeNotBetween(String value1, String value2) {
             addCriterion("begin_time not between", value1, value2, "beginTime");
             return (Criteria) this;
         }

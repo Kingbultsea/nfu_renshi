@@ -1,7 +1,6 @@
 package cn.nfsysu.renshi.domain;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class ScientificResearchAchievementsMedicineExample {
@@ -535,52 +534,62 @@ public class ScientificResearchAchievementsMedicineExample {
             return (Criteria) this;
         }
 
-        public Criteria andAwardTimeEqualTo(Date value) {
+        public Criteria andAwardTimeEqualTo(String value) {
             addCriterion("award_time =", value, "awardTime");
             return (Criteria) this;
         }
 
-        public Criteria andAwardTimeNotEqualTo(Date value) {
+        public Criteria andAwardTimeNotEqualTo(String value) {
             addCriterion("award_time <>", value, "awardTime");
             return (Criteria) this;
         }
 
-        public Criteria andAwardTimeGreaterThan(Date value) {
+        public Criteria andAwardTimeGreaterThan(String value) {
             addCriterion("award_time >", value, "awardTime");
             return (Criteria) this;
         }
 
-        public Criteria andAwardTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andAwardTimeGreaterThanOrEqualTo(String value) {
             addCriterion("award_time >=", value, "awardTime");
             return (Criteria) this;
         }
 
-        public Criteria andAwardTimeLessThan(Date value) {
+        public Criteria andAwardTimeLessThan(String value) {
             addCriterion("award_time <", value, "awardTime");
             return (Criteria) this;
         }
 
-        public Criteria andAwardTimeLessThanOrEqualTo(Date value) {
+        public Criteria andAwardTimeLessThanOrEqualTo(String value) {
             addCriterion("award_time <=", value, "awardTime");
             return (Criteria) this;
         }
 
-        public Criteria andAwardTimeIn(List<Date> values) {
+        public Criteria andAwardTimeLike(String value) {
+            addCriterion("award_time like", value, "awardTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andAwardTimeNotLike(String value) {
+            addCriterion("award_time not like", value, "awardTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andAwardTimeIn(List<String> values) {
             addCriterion("award_time in", values, "awardTime");
             return (Criteria) this;
         }
 
-        public Criteria andAwardTimeNotIn(List<Date> values) {
+        public Criteria andAwardTimeNotIn(List<String> values) {
             addCriterion("award_time not in", values, "awardTime");
             return (Criteria) this;
         }
 
-        public Criteria andAwardTimeBetween(Date value1, Date value2) {
+        public Criteria andAwardTimeBetween(String value1, String value2) {
             addCriterion("award_time between", value1, value2, "awardTime");
             return (Criteria) this;
         }
 
-        public Criteria andAwardTimeNotBetween(Date value1, Date value2) {
+        public Criteria andAwardTimeNotBetween(String value1, String value2) {
             addCriterion("award_time not between", value1, value2, "awardTime");
             return (Criteria) this;
         }

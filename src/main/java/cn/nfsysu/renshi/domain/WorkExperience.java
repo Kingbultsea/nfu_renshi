@@ -1,7 +1,6 @@
 package cn.nfsysu.renshi.domain;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * @author 
@@ -22,7 +21,7 @@ public class WorkExperience implements Serializable {
     /**
      * 开始任职年月
      */
-    private Date beginTime;
+    private String beginTime;
 
     /**
      * 离职年月
@@ -65,11 +64,11 @@ public class WorkExperience implements Serializable {
         this.unitName = unitName;
     }
 
-    public Date getBeginTime() {
+    public String getBeginTime() {
         return beginTime;
     }
 
-    public void setBeginTime(Date beginTime) {
+    public void setBeginTime(String beginTime) {
         this.beginTime = beginTime;
     }
 

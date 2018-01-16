@@ -5,8 +5,8 @@
     <id column="Id" jdbcType="INTEGER" property="id" />
     <result column="father" jdbcType="INTEGER" property="father" />
     <result column="duty" jdbcType="VARCHAR" property="duty" />
-    <result column="begin_time" jdbcType="TIMESTAMP" property="beginTime" />
-    <result column="end_time" jdbcType="TIMESTAMP" property="endTime" />
+    <result column="begin_time" jdbcType="VARCHAR" property="beginTime" />
+    <result column="end_time" jdbcType="VARCHAR" property="endTime" />
     <result column="unit_name" jdbcType="VARCHAR" property="unitName" />
     <result column="is_has_same_level" jdbcType="VARCHAR" property="isHasSameLevel" />
   </resultMap>
@@ -116,8 +116,8 @@
     insert into professional_duties (father, duty, begin_time, 
       end_time, unit_name, is_has_same_level
       )
-    values (#{father,jdbcType=INTEGER}, #{duty,jdbcType=VARCHAR}, #{beginTime,jdbcType=TIMESTAMP}, 
-      #{endTime,jdbcType=TIMESTAMP}, #{unitName,jdbcType=VARCHAR}, #{isHasSameLevel,jdbcType=VARCHAR}
+    values (#{father,jdbcType=INTEGER}, #{duty,jdbcType=VARCHAR}, #{beginTime,jdbcType=VARCHAR}, 
+      #{endTime,jdbcType=VARCHAR}, #{unitName,jdbcType=VARCHAR}, #{isHasSameLevel,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="cn.nfsysu.renshi.domain.ProfessionalDuties">
@@ -153,10 +153,10 @@
         #{duty,jdbcType=VARCHAR},
       </if>
       <if test="beginTime != null">
-        #{beginTime,jdbcType=TIMESTAMP},
+        #{beginTime,jdbcType=VARCHAR},
       </if>
       <if test="endTime != null">
-        #{endTime,jdbcType=TIMESTAMP},
+        #{endTime,jdbcType=VARCHAR},
       </if>
       <if test="unitName != null">
         #{unitName,jdbcType=VARCHAR},
@@ -185,10 +185,10 @@
         duty = #{record.duty,jdbcType=VARCHAR},
       </if>
       <if test="record.beginTime != null">
-        begin_time = #{record.beginTime,jdbcType=TIMESTAMP},
+        begin_time = #{record.beginTime,jdbcType=VARCHAR},
       </if>
       <if test="record.endTime != null">
-        end_time = #{record.endTime,jdbcType=TIMESTAMP},
+        end_time = #{record.endTime,jdbcType=VARCHAR},
       </if>
       <if test="record.unitName != null">
         unit_name = #{record.unitName,jdbcType=VARCHAR},
@@ -206,8 +206,8 @@
     set Id = #{record.id,jdbcType=INTEGER},
       father = #{record.father,jdbcType=INTEGER},
       duty = #{record.duty,jdbcType=VARCHAR},
-      begin_time = #{record.beginTime,jdbcType=TIMESTAMP},
-      end_time = #{record.endTime,jdbcType=TIMESTAMP},
+      begin_time = #{record.beginTime,jdbcType=VARCHAR},
+      end_time = #{record.endTime,jdbcType=VARCHAR},
       unit_name = #{record.unitName,jdbcType=VARCHAR},
       is_has_same_level = #{record.isHasSameLevel,jdbcType=VARCHAR}
     <if test="_parameter != null">
@@ -224,10 +224,10 @@
         duty = #{duty,jdbcType=VARCHAR},
       </if>
       <if test="beginTime != null">
-        begin_time = #{beginTime,jdbcType=TIMESTAMP},
+        begin_time = #{beginTime,jdbcType=VARCHAR},
       </if>
       <if test="endTime != null">
-        end_time = #{endTime,jdbcType=TIMESTAMP},
+        end_time = #{endTime,jdbcType=VARCHAR},
       </if>
       <if test="unitName != null">
         unit_name = #{unitName,jdbcType=VARCHAR},
@@ -242,8 +242,8 @@
     update professional_duties
     set father = #{father,jdbcType=INTEGER},
       duty = #{duty,jdbcType=VARCHAR},
-      begin_time = #{beginTime,jdbcType=TIMESTAMP},
-      end_time = #{endTime,jdbcType=TIMESTAMP},
+      begin_time = #{beginTime,jdbcType=VARCHAR},
+      end_time = #{endTime,jdbcType=VARCHAR},
       unit_name = #{unitName,jdbcType=VARCHAR},
       is_has_same_level = #{isHasSameLevel,jdbcType=VARCHAR}
     where Id = #{id,jdbcType=INTEGER}

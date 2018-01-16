@@ -8,7 +8,7 @@
     <result column="is_representativeness" jdbcType="VARCHAR" property="isRepresentativeness" />
     <result column="patent_name" jdbcType="VARCHAR" property="patentName" />
     <result column="subject_areas" jdbcType="VARCHAR" property="subjectAreas" />
-    <result column="approve_time" jdbcType="TIMESTAMP" property="approveTime" />
+    <result column="approve_time" jdbcType="VARCHAR" property="approveTime" />
     <result column="self_role" jdbcType="VARCHAR" property="selfRole" />
     <result column="patent_number" jdbcType="VARCHAR" property="patentNumber" />
   </resultMap>
@@ -120,7 +120,7 @@
       patent_name, subject_areas, approve_time, 
       self_role, patent_number)
     values (#{father,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{isRepresentativeness,jdbcType=VARCHAR}, 
-      #{patentName,jdbcType=VARCHAR}, #{subjectAreas,jdbcType=VARCHAR}, #{approveTime,jdbcType=TIMESTAMP}, 
+      #{patentName,jdbcType=VARCHAR}, #{subjectAreas,jdbcType=VARCHAR}, #{approveTime,jdbcType=VARCHAR}, 
       #{selfRole,jdbcType=VARCHAR}, #{patentNumber,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="cn.nfsysu.renshi.domain.ScientificResearchAchievementsPatent">
@@ -171,7 +171,7 @@
         #{subjectAreas,jdbcType=VARCHAR},
       </if>
       <if test="approveTime != null">
-        #{approveTime,jdbcType=TIMESTAMP},
+        #{approveTime,jdbcType=VARCHAR},
       </if>
       <if test="selfRole != null">
         #{selfRole,jdbcType=VARCHAR},
@@ -209,7 +209,7 @@
         subject_areas = #{record.subjectAreas,jdbcType=VARCHAR},
       </if>
       <if test="record.approveTime != null">
-        approve_time = #{record.approveTime,jdbcType=TIMESTAMP},
+        approve_time = #{record.approveTime,jdbcType=VARCHAR},
       </if>
       <if test="record.selfRole != null">
         self_role = #{record.selfRole,jdbcType=VARCHAR},
@@ -230,7 +230,7 @@
       is_representativeness = #{record.isRepresentativeness,jdbcType=VARCHAR},
       patent_name = #{record.patentName,jdbcType=VARCHAR},
       subject_areas = #{record.subjectAreas,jdbcType=VARCHAR},
-      approve_time = #{record.approveTime,jdbcType=TIMESTAMP},
+      approve_time = #{record.approveTime,jdbcType=VARCHAR},
       self_role = #{record.selfRole,jdbcType=VARCHAR},
       patent_number = #{record.patentNumber,jdbcType=VARCHAR}
     <if test="_parameter != null">
@@ -256,7 +256,7 @@
         subject_areas = #{subjectAreas,jdbcType=VARCHAR},
       </if>
       <if test="approveTime != null">
-        approve_time = #{approveTime,jdbcType=TIMESTAMP},
+        approve_time = #{approveTime,jdbcType=VARCHAR},
       </if>
       <if test="selfRole != null">
         self_role = #{selfRole,jdbcType=VARCHAR},
@@ -274,7 +274,7 @@
       is_representativeness = #{isRepresentativeness,jdbcType=VARCHAR},
       patent_name = #{patentName,jdbcType=VARCHAR},
       subject_areas = #{subjectAreas,jdbcType=VARCHAR},
-      approve_time = #{approveTime,jdbcType=TIMESTAMP},
+      approve_time = #{approveTime,jdbcType=VARCHAR},
       self_role = #{selfRole,jdbcType=VARCHAR},
       patent_number = #{patentNumber,jdbcType=VARCHAR}
     where Id = #{id,jdbcType=INTEGER}

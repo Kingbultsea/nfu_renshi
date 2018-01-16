@@ -5,7 +5,7 @@
     <id column="Id" jdbcType="INTEGER" property="id" />
     <result column="father" jdbcType="INTEGER" property="father" />
     <result column="unit_name" jdbcType="VARCHAR" property="unitName" />
-    <result column="begin_time" jdbcType="TIMESTAMP" property="beginTime" />
+    <result column="begin_time" jdbcType="VARCHAR" property="beginTime" />
     <result column="end_time" jdbcType="VARCHAR" property="endTime" />
     <result column="unit_properties" jdbcType="VARCHAR" property="unitProperties" />
     <result column="post" jdbcType="VARCHAR" property="post" />
@@ -116,7 +116,7 @@
     insert into work_experience (father, unit_name, begin_time, 
       end_time, unit_properties, post
       )
-    values (#{father,jdbcType=INTEGER}, #{unitName,jdbcType=VARCHAR}, #{beginTime,jdbcType=TIMESTAMP}, 
+    values (#{father,jdbcType=INTEGER}, #{unitName,jdbcType=VARCHAR}, #{beginTime,jdbcType=VARCHAR}, 
       #{endTime,jdbcType=VARCHAR}, #{unitProperties,jdbcType=VARCHAR}, #{post,jdbcType=VARCHAR}
       )
   </insert>
@@ -153,7 +153,7 @@
         #{unitName,jdbcType=VARCHAR},
       </if>
       <if test="beginTime != null">
-        #{beginTime,jdbcType=TIMESTAMP},
+        #{beginTime,jdbcType=VARCHAR},
       </if>
       <if test="endTime != null">
         #{endTime,jdbcType=VARCHAR},
@@ -185,7 +185,7 @@
         unit_name = #{record.unitName,jdbcType=VARCHAR},
       </if>
       <if test="record.beginTime != null">
-        begin_time = #{record.beginTime,jdbcType=TIMESTAMP},
+        begin_time = #{record.beginTime,jdbcType=VARCHAR},
       </if>
       <if test="record.endTime != null">
         end_time = #{record.endTime,jdbcType=VARCHAR},
@@ -206,7 +206,7 @@
     set Id = #{record.id,jdbcType=INTEGER},
       father = #{record.father,jdbcType=INTEGER},
       unit_name = #{record.unitName,jdbcType=VARCHAR},
-      begin_time = #{record.beginTime,jdbcType=TIMESTAMP},
+      begin_time = #{record.beginTime,jdbcType=VARCHAR},
       end_time = #{record.endTime,jdbcType=VARCHAR},
       unit_properties = #{record.unitProperties,jdbcType=VARCHAR},
       post = #{record.post,jdbcType=VARCHAR}
@@ -224,7 +224,7 @@
         unit_name = #{unitName,jdbcType=VARCHAR},
       </if>
       <if test="beginTime != null">
-        begin_time = #{beginTime,jdbcType=TIMESTAMP},
+        begin_time = #{beginTime,jdbcType=VARCHAR},
       </if>
       <if test="endTime != null">
         end_time = #{endTime,jdbcType=VARCHAR},
@@ -242,7 +242,7 @@
     update work_experience
     set father = #{father,jdbcType=INTEGER},
       unit_name = #{unitName,jdbcType=VARCHAR},
-      begin_time = #{beginTime,jdbcType=TIMESTAMP},
+      begin_time = #{beginTime,jdbcType=VARCHAR},
       end_time = #{endTime,jdbcType=VARCHAR},
       unit_properties = #{unitProperties,jdbcType=VARCHAR},
       post = #{post,jdbcType=VARCHAR}

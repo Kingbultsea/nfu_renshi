@@ -1,7 +1,6 @@
 package cn.nfsysu.renshi.domain;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * @author 
@@ -29,7 +28,7 @@ public class ScientificResearchAchievementsStandard implements Serializable {
     /**
      * 发布日期
      */
-    private Date releaseDate;
+    private String releaseDate;
 
     /**
      * 发布单位名称
@@ -78,11 +77,11 @@ public class ScientificResearchAchievementsStandard implements Serializable {
         this.selfRole = selfRole;
     }
 
-    public Date getReleaseDate() {
+    public String getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(Date releaseDate) {
+    public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
     }
 

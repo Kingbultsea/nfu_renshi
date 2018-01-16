@@ -6,7 +6,7 @@
     <result column="father" jdbcType="INTEGER" property="father" />
     <result column="level" jdbcType="VARCHAR" property="level" />
     <result column="honor_name" jdbcType="VARCHAR" property="honorName" />
-    <result column="honor_time" jdbcType="TIMESTAMP" property="honorTime" />
+    <result column="honor_time" jdbcType="VARCHAR" property="honorTime" />
     <result column="honor_describe" jdbcType="VARCHAR" property="honorDescribe" />
     <result column="unit_name" jdbcType="VARCHAR" property="unitName" />
   </resultMap>
@@ -117,7 +117,7 @@
       honor_time, honor_describe, unit_name
       )
     values (#{father,jdbcType=INTEGER}, #{level,jdbcType=VARCHAR}, #{honorName,jdbcType=VARCHAR}, 
-      #{honorTime,jdbcType=TIMESTAMP}, #{honorDescribe,jdbcType=VARCHAR}, #{unitName,jdbcType=VARCHAR}
+      #{honorTime,jdbcType=VARCHAR}, #{honorDescribe,jdbcType=VARCHAR}, #{unitName,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="cn.nfsysu.renshi.domain.TeacherEthics">
@@ -156,7 +156,7 @@
         #{honorName,jdbcType=VARCHAR},
       </if>
       <if test="honorTime != null">
-        #{honorTime,jdbcType=TIMESTAMP},
+        #{honorTime,jdbcType=VARCHAR},
       </if>
       <if test="honorDescribe != null">
         #{honorDescribe,jdbcType=VARCHAR},
@@ -188,7 +188,7 @@
         honor_name = #{record.honorName,jdbcType=VARCHAR},
       </if>
       <if test="record.honorTime != null">
-        honor_time = #{record.honorTime,jdbcType=TIMESTAMP},
+        honor_time = #{record.honorTime,jdbcType=VARCHAR},
       </if>
       <if test="record.honorDescribe != null">
         honor_describe = #{record.honorDescribe,jdbcType=VARCHAR},
@@ -207,7 +207,7 @@
       father = #{record.father,jdbcType=INTEGER},
       level = #{record.level,jdbcType=VARCHAR},
       honor_name = #{record.honorName,jdbcType=VARCHAR},
-      honor_time = #{record.honorTime,jdbcType=TIMESTAMP},
+      honor_time = #{record.honorTime,jdbcType=VARCHAR},
       honor_describe = #{record.honorDescribe,jdbcType=VARCHAR},
       unit_name = #{record.unitName,jdbcType=VARCHAR}
     <if test="_parameter != null">
@@ -227,7 +227,7 @@
         honor_name = #{honorName,jdbcType=VARCHAR},
       </if>
       <if test="honorTime != null">
-        honor_time = #{honorTime,jdbcType=TIMESTAMP},
+        honor_time = #{honorTime,jdbcType=VARCHAR},
       </if>
       <if test="honorDescribe != null">
         honor_describe = #{honorDescribe,jdbcType=VARCHAR},
@@ -243,7 +243,7 @@
     set father = #{father,jdbcType=INTEGER},
       level = #{level,jdbcType=VARCHAR},
       honor_name = #{honorName,jdbcType=VARCHAR},
-      honor_time = #{honorTime,jdbcType=TIMESTAMP},
+      honor_time = #{honorTime,jdbcType=VARCHAR},
       honor_describe = #{honorDescribe,jdbcType=VARCHAR},
       unit_name = #{unitName,jdbcType=VARCHAR}
     where Id = #{id,jdbcType=INTEGER}

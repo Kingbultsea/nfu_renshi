@@ -10,8 +10,8 @@
     <result column="approve_number" jdbcType="VARCHAR" property="approveNumber" />
     <result column="subject_areas" jdbcType="VARCHAR" property="subjectAreas" />
     <result column="funding" jdbcType="INTEGER" property="funding" />
-    <result column="begin_time" jdbcType="TIMESTAMP" property="beginTime" />
-    <result column="end_time" jdbcType="TIMESTAMP" property="endTime" />
+    <result column="begin_time" jdbcType="VARCHAR" property="beginTime" />
+    <result column="end_time" jdbcType="VARCHAR" property="endTime" />
     <result column="self_role" jdbcType="VARCHAR" property="selfRole" />
     <result column="self_rank" jdbcType="VARCHAR" property="selfRank" />
     <result column="authorized_unit" jdbcType="VARCHAR" property="authorizedUnit" />
@@ -128,7 +128,7 @@
       project_source)
     values (#{father,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{isRepresentativeness,jdbcType=VARCHAR}, 
       #{projectName,jdbcType=VARCHAR}, #{approveNumber,jdbcType=VARCHAR}, #{subjectAreas,jdbcType=VARCHAR}, 
-      #{funding,jdbcType=INTEGER}, #{beginTime,jdbcType=TIMESTAMP}, #{endTime,jdbcType=TIMESTAMP}, 
+      #{funding,jdbcType=INTEGER}, #{beginTime,jdbcType=VARCHAR}, #{endTime,jdbcType=VARCHAR}, 
       #{selfRole,jdbcType=VARCHAR}, #{selfRank,jdbcType=VARCHAR}, #{authorizedUnit,jdbcType=VARCHAR}, 
       #{projectSource,jdbcType=VARCHAR})
   </insert>
@@ -201,10 +201,10 @@
         #{funding,jdbcType=INTEGER},
       </if>
       <if test="beginTime != null">
-        #{beginTime,jdbcType=TIMESTAMP},
+        #{beginTime,jdbcType=VARCHAR},
       </if>
       <if test="endTime != null">
-        #{endTime,jdbcType=TIMESTAMP},
+        #{endTime,jdbcType=VARCHAR},
       </if>
       <if test="selfRole != null">
         #{selfRole,jdbcType=VARCHAR},
@@ -254,10 +254,10 @@
         funding = #{record.funding,jdbcType=INTEGER},
       </if>
       <if test="record.beginTime != null">
-        begin_time = #{record.beginTime,jdbcType=TIMESTAMP},
+        begin_time = #{record.beginTime,jdbcType=VARCHAR},
       </if>
       <if test="record.endTime != null">
-        end_time = #{record.endTime,jdbcType=TIMESTAMP},
+        end_time = #{record.endTime,jdbcType=VARCHAR},
       </if>
       <if test="record.selfRole != null">
         self_role = #{record.selfRole,jdbcType=VARCHAR},
@@ -286,8 +286,8 @@
       approve_number = #{record.approveNumber,jdbcType=VARCHAR},
       subject_areas = #{record.subjectAreas,jdbcType=VARCHAR},
       funding = #{record.funding,jdbcType=INTEGER},
-      begin_time = #{record.beginTime,jdbcType=TIMESTAMP},
-      end_time = #{record.endTime,jdbcType=TIMESTAMP},
+      begin_time = #{record.beginTime,jdbcType=VARCHAR},
+      end_time = #{record.endTime,jdbcType=VARCHAR},
       self_role = #{record.selfRole,jdbcType=VARCHAR},
       self_rank = #{record.selfRank,jdbcType=VARCHAR},
       authorized_unit = #{record.authorizedUnit,jdbcType=VARCHAR},
@@ -321,10 +321,10 @@
         funding = #{funding,jdbcType=INTEGER},
       </if>
       <if test="beginTime != null">
-        begin_time = #{beginTime,jdbcType=TIMESTAMP},
+        begin_time = #{beginTime,jdbcType=VARCHAR},
       </if>
       <if test="endTime != null">
-        end_time = #{endTime,jdbcType=TIMESTAMP},
+        end_time = #{endTime,jdbcType=VARCHAR},
       </if>
       <if test="selfRole != null">
         self_role = #{selfRole,jdbcType=VARCHAR},
@@ -350,8 +350,8 @@
       approve_number = #{approveNumber,jdbcType=VARCHAR},
       subject_areas = #{subjectAreas,jdbcType=VARCHAR},
       funding = #{funding,jdbcType=INTEGER},
-      begin_time = #{beginTime,jdbcType=TIMESTAMP},
-      end_time = #{endTime,jdbcType=TIMESTAMP},
+      begin_time = #{beginTime,jdbcType=VARCHAR},
+      end_time = #{endTime,jdbcType=VARCHAR},
       self_role = #{selfRole,jdbcType=VARCHAR},
       self_rank = #{selfRank,jdbcType=VARCHAR},
       authorized_unit = #{authorizedUnit,jdbcType=VARCHAR},

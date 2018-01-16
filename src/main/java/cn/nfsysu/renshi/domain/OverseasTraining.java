@@ -1,7 +1,6 @@
 package cn.nfsysu.renshi.domain;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * @author 
@@ -17,7 +16,7 @@ public class OverseasTraining implements Serializable {
     /**
      * 开始日期
      */
-    private Date beginTime;
+    private String beginTime;
 
     /**
      * 结束日期
@@ -62,11 +61,11 @@ public class OverseasTraining implements Serializable {
         this.isHasExperience = isHasExperience;
     }
 
-    public Date getBeginTime() {
+    public String getBeginTime() {
         return beginTime;
     }
 
-    public void setBeginTime(Date beginTime) {
+    public void setBeginTime(String beginTime) {
         this.beginTime = beginTime;
     }
 

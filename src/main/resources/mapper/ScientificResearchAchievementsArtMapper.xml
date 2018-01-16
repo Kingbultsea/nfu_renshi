@@ -8,7 +8,7 @@
     <result column="is_representativeness" jdbcType="VARCHAR" property="isRepresentativeness" />
     <result column="art_name" jdbcType="VARCHAR" property="artName" />
     <result column="self_role" jdbcType="VARCHAR" property="selfRole" />
-    <result column="complete_time" jdbcType="TIMESTAMP" property="completeTime" />
+    <result column="complete_time" jdbcType="VARCHAR" property="completeTime" />
     <result column="complete_place" jdbcType="VARCHAR" property="completePlace" />
     <result column="job_description" jdbcType="VARCHAR" property="jobDescription" />
   </resultMap>
@@ -120,7 +120,7 @@
       art_name, self_role, complete_time, 
       complete_place, job_description)
     values (#{father,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{isRepresentativeness,jdbcType=VARCHAR}, 
-      #{artName,jdbcType=VARCHAR}, #{selfRole,jdbcType=VARCHAR}, #{completeTime,jdbcType=TIMESTAMP}, 
+      #{artName,jdbcType=VARCHAR}, #{selfRole,jdbcType=VARCHAR}, #{completeTime,jdbcType=VARCHAR}, 
       #{completePlace,jdbcType=VARCHAR}, #{jobDescription,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="cn.nfsysu.renshi.domain.ScientificResearchAchievementsArt">
@@ -171,7 +171,7 @@
         #{selfRole,jdbcType=VARCHAR},
       </if>
       <if test="completeTime != null">
-        #{completeTime,jdbcType=TIMESTAMP},
+        #{completeTime,jdbcType=VARCHAR},
       </if>
       <if test="completePlace != null">
         #{completePlace,jdbcType=VARCHAR},
@@ -209,7 +209,7 @@
         self_role = #{record.selfRole,jdbcType=VARCHAR},
       </if>
       <if test="record.completeTime != null">
-        complete_time = #{record.completeTime,jdbcType=TIMESTAMP},
+        complete_time = #{record.completeTime,jdbcType=VARCHAR},
       </if>
       <if test="record.completePlace != null">
         complete_place = #{record.completePlace,jdbcType=VARCHAR},
@@ -230,7 +230,7 @@
       is_representativeness = #{record.isRepresentativeness,jdbcType=VARCHAR},
       art_name = #{record.artName,jdbcType=VARCHAR},
       self_role = #{record.selfRole,jdbcType=VARCHAR},
-      complete_time = #{record.completeTime,jdbcType=TIMESTAMP},
+      complete_time = #{record.completeTime,jdbcType=VARCHAR},
       complete_place = #{record.completePlace,jdbcType=VARCHAR},
       job_description = #{record.jobDescription,jdbcType=VARCHAR}
     <if test="_parameter != null">
@@ -256,7 +256,7 @@
         self_role = #{selfRole,jdbcType=VARCHAR},
       </if>
       <if test="completeTime != null">
-        complete_time = #{completeTime,jdbcType=TIMESTAMP},
+        complete_time = #{completeTime,jdbcType=VARCHAR},
       </if>
       <if test="completePlace != null">
         complete_place = #{completePlace,jdbcType=VARCHAR},
@@ -274,7 +274,7 @@
       is_representativeness = #{isRepresentativeness,jdbcType=VARCHAR},
       art_name = #{artName,jdbcType=VARCHAR},
       self_role = #{selfRole,jdbcType=VARCHAR},
-      complete_time = #{completeTime,jdbcType=TIMESTAMP},
+      complete_time = #{completeTime,jdbcType=VARCHAR},
       complete_place = #{completePlace,jdbcType=VARCHAR},
       job_description = #{jobDescription,jdbcType=VARCHAR}
     where Id = #{id,jdbcType=INTEGER}

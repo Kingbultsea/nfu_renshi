@@ -7,7 +7,7 @@
     <result column="passwd" jdbcType="VARCHAR" property="passwd" />
   </resultMap>
 
-  <select id="getPasswByName" resultType="cn.nfsysu.renshi.domain.UserTemp">
+  <select id="getPasswByName" parameterType="String" resultType="cn.nfsysu.renshi.domain.UserTemp">
     SELECT * FROM user_temp WHERE user_name=#{name};
   </select>
 

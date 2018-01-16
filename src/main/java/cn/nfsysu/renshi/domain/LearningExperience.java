@@ -1,7 +1,6 @@
 package cn.nfsysu.renshi.domain;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * @author 
@@ -34,7 +33,7 @@ public class LearningExperience implements Serializable {
     /**
      * 入学年月
      */
-    private Date beginTime;
+    private String beginTime;
 
     /**
      * 毕业年月
@@ -54,7 +53,7 @@ public class LearningExperience implements Serializable {
     /**
      * 学位授予年月
      */
-    private Date degreeAwardedTime;
+    private String degreeAwardedTime;
 
     /**
      * 学习方式
@@ -116,11 +115,11 @@ public class LearningExperience implements Serializable {
         this.majors = majors;
     }
 
-    public Date getBeginTime() {
+    public String getBeginTime() {
         return beginTime;
     }
 
-    public void setBeginTime(Date beginTime) {
+    public void setBeginTime(String beginTime) {
         this.beginTime = beginTime;
     }
 
@@ -148,11 +147,11 @@ public class LearningExperience implements Serializable {
         this.degreeName = degreeName;
     }
 
-    public Date getDegreeAwardedTime() {
+    public String getDegreeAwardedTime() {
         return degreeAwardedTime;
     }
 
-    public void setDegreeAwardedTime(Date degreeAwardedTime) {
+    public void setDegreeAwardedTime(String degreeAwardedTime) {
         this.degreeAwardedTime = degreeAwardedTime;
     }
 

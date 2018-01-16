@@ -5,20 +5,20 @@
     <id column="Id" jdbcType="INTEGER" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="old_name" jdbcType="VARCHAR" property="oldName" />
-    <result column="sex" jdbcType="INTEGER" property="sex" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
     <result column="work_number" jdbcType="VARCHAR" property="workNumber" />
     <result column="nationality" jdbcType="VARCHAR" property="nationality" />
     <result column="id_card_type" jdbcType="VARCHAR" property="idCardType" />
     <result column="id_card_number" jdbcType="CHAR" property="idCardNumber" />
-    <result column="birth_date" jdbcType="TIMESTAMP" property="birthDate" />
+    <result column="birth_date" jdbcType="VARCHAR" property="birthDate" />
     <result column="native_place" jdbcType="VARCHAR" property="nativePlace" />
     <result column="native_heath" jdbcType="VARCHAR" property="nativeHeath" />
     <result column="nation" jdbcType="VARCHAR" property="nation" />
     <result column="political_outlook" jdbcType="VARCHAR" property="politicalOutlook" />
     <result column="marital_status" jdbcType="VARCHAR" property="maritalStatus" />
     <result column="health_status" jdbcType="VARCHAR" property="healthStatus" />
-    <result column="join_work_date" jdbcType="TIMESTAMP" property="joinWorkDate" />
-    <result column="join_school_date" jdbcType="TIMESTAMP" property="joinSchoolDate" />
+    <result column="join_work_date" jdbcType="VARCHAR" property="joinWorkDate" />
+    <result column="join_school_date" jdbcType="VARCHAR" property="joinSchoolDate" />
     <result column="employee_origin" jdbcType="VARCHAR" property="employeeOrigin" />
     <result column="margin_structure" jdbcType="VARCHAR" property="marginStructure" />
     <result column="work_type" jdbcType="VARCHAR" property="workType" />
@@ -143,12 +143,12 @@
       work_type, is_organization, human_form, 
       sign_contract, organisation, state_of_personnel
       )
-    values (#{name,jdbcType=VARCHAR}, #{oldName,jdbcType=VARCHAR}, #{sex,jdbcType=INTEGER}, 
+    values (#{name,jdbcType=VARCHAR}, #{oldName,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, 
       #{workNumber,jdbcType=VARCHAR}, #{nationality,jdbcType=VARCHAR}, #{idCardType,jdbcType=VARCHAR}, 
-      #{idCardNumber,jdbcType=CHAR}, #{birthDate,jdbcType=TIMESTAMP}, #{nativePlace,jdbcType=VARCHAR}, 
+      #{idCardNumber,jdbcType=CHAR}, #{birthDate,jdbcType=VARCHAR}, #{nativePlace,jdbcType=VARCHAR}, 
       #{nativeHeath,jdbcType=VARCHAR}, #{nation,jdbcType=VARCHAR}, #{politicalOutlook,jdbcType=VARCHAR}, 
-      #{maritalStatus,jdbcType=VARCHAR}, #{healthStatus,jdbcType=VARCHAR}, #{joinWorkDate,jdbcType=TIMESTAMP}, 
-      #{joinSchoolDate,jdbcType=TIMESTAMP}, #{employeeOrigin,jdbcType=VARCHAR}, #{marginStructure,jdbcType=VARCHAR}, 
+      #{maritalStatus,jdbcType=VARCHAR}, #{healthStatus,jdbcType=VARCHAR}, #{joinWorkDate,jdbcType=VARCHAR}, 
+      #{joinSchoolDate,jdbcType=VARCHAR}, #{employeeOrigin,jdbcType=VARCHAR}, #{marginStructure,jdbcType=VARCHAR}, 
       #{workType,jdbcType=VARCHAR}, #{isOrganization,jdbcType=VARCHAR}, #{humanForm,jdbcType=VARCHAR}, 
       #{signContract,jdbcType=VARCHAR}, #{organisation,jdbcType=VARCHAR}, #{stateOfPersonnel,jdbcType=VARCHAR}
       )
@@ -240,7 +240,7 @@
         #{oldName,jdbcType=VARCHAR},
       </if>
       <if test="sex != null">
-        #{sex,jdbcType=INTEGER},
+        #{sex,jdbcType=VARCHAR},
       </if>
       <if test="workNumber != null">
         #{workNumber,jdbcType=VARCHAR},
@@ -255,7 +255,7 @@
         #{idCardNumber,jdbcType=CHAR},
       </if>
       <if test="birthDate != null">
-        #{birthDate,jdbcType=TIMESTAMP},
+        #{birthDate,jdbcType=VARCHAR},
       </if>
       <if test="nativePlace != null">
         #{nativePlace,jdbcType=VARCHAR},
@@ -276,10 +276,10 @@
         #{healthStatus,jdbcType=VARCHAR},
       </if>
       <if test="joinWorkDate != null">
-        #{joinWorkDate,jdbcType=TIMESTAMP},
+        #{joinWorkDate,jdbcType=VARCHAR},
       </if>
       <if test="joinSchoolDate != null">
-        #{joinSchoolDate,jdbcType=TIMESTAMP},
+        #{joinSchoolDate,jdbcType=VARCHAR},
       </if>
       <if test="employeeOrigin != null">
         #{employeeOrigin,jdbcType=VARCHAR},
@@ -326,7 +326,7 @@
         old_name = #{record.oldName,jdbcType=VARCHAR},
       </if>
       <if test="record.sex != null">
-        sex = #{record.sex,jdbcType=INTEGER},
+        sex = #{record.sex,jdbcType=VARCHAR},
       </if>
       <if test="record.workNumber != null">
         work_number = #{record.workNumber,jdbcType=VARCHAR},
@@ -341,7 +341,7 @@
         id_card_number = #{record.idCardNumber,jdbcType=CHAR},
       </if>
       <if test="record.birthDate != null">
-        birth_date = #{record.birthDate,jdbcType=TIMESTAMP},
+        birth_date = #{record.birthDate,jdbcType=VARCHAR},
       </if>
       <if test="record.nativePlace != null">
         native_place = #{record.nativePlace,jdbcType=VARCHAR},
@@ -362,10 +362,10 @@
         health_status = #{record.healthStatus,jdbcType=VARCHAR},
       </if>
       <if test="record.joinWorkDate != null">
-        join_work_date = #{record.joinWorkDate,jdbcType=TIMESTAMP},
+        join_work_date = #{record.joinWorkDate,jdbcType=VARCHAR},
       </if>
       <if test="record.joinSchoolDate != null">
-        join_school_date = #{record.joinSchoolDate,jdbcType=TIMESTAMP},
+        join_school_date = #{record.joinSchoolDate,jdbcType=VARCHAR},
       </if>
       <if test="record.employeeOrigin != null">
         employee_origin = #{record.employeeOrigin,jdbcType=VARCHAR},
@@ -401,20 +401,20 @@
     set Id = #{record.id,jdbcType=INTEGER},
       name = #{record.name,jdbcType=VARCHAR},
       old_name = #{record.oldName,jdbcType=VARCHAR},
-      sex = #{record.sex,jdbcType=INTEGER},
+      sex = #{record.sex,jdbcType=VARCHAR},
       work_number = #{record.workNumber,jdbcType=VARCHAR},
       nationality = #{record.nationality,jdbcType=VARCHAR},
       id_card_type = #{record.idCardType,jdbcType=VARCHAR},
       id_card_number = #{record.idCardNumber,jdbcType=CHAR},
-      birth_date = #{record.birthDate,jdbcType=TIMESTAMP},
+      birth_date = #{record.birthDate,jdbcType=VARCHAR},
       native_place = #{record.nativePlace,jdbcType=VARCHAR},
       native_heath = #{record.nativeHeath,jdbcType=VARCHAR},
       nation = #{record.nation,jdbcType=VARCHAR},
       political_outlook = #{record.politicalOutlook,jdbcType=VARCHAR},
       marital_status = #{record.maritalStatus,jdbcType=VARCHAR},
       health_status = #{record.healthStatus,jdbcType=VARCHAR},
-      join_work_date = #{record.joinWorkDate,jdbcType=TIMESTAMP},
-      join_school_date = #{record.joinSchoolDate,jdbcType=TIMESTAMP},
+      join_work_date = #{record.joinWorkDate,jdbcType=VARCHAR},
+      join_school_date = #{record.joinSchoolDate,jdbcType=VARCHAR},
       employee_origin = #{record.employeeOrigin,jdbcType=VARCHAR},
       margin_structure = #{record.marginStructure,jdbcType=VARCHAR},
       work_type = #{record.workType,jdbcType=VARCHAR},
@@ -437,7 +437,7 @@
         old_name = #{oldName,jdbcType=VARCHAR},
       </if>
       <if test="sex != null">
-        sex = #{sex,jdbcType=INTEGER},
+        sex = #{sex,jdbcType=VARCHAR},
       </if>
       <if test="workNumber != null">
         work_number = #{workNumber,jdbcType=VARCHAR},
@@ -452,7 +452,7 @@
         id_card_number = #{idCardNumber,jdbcType=CHAR},
       </if>
       <if test="birthDate != null">
-        birth_date = #{birthDate,jdbcType=TIMESTAMP},
+        birth_date = #{birthDate,jdbcType=VARCHAR},
       </if>
       <if test="nativePlace != null">
         native_place = #{nativePlace,jdbcType=VARCHAR},
@@ -473,10 +473,10 @@
         health_status = #{healthStatus,jdbcType=VARCHAR},
       </if>
       <if test="joinWorkDate != null">
-        join_work_date = #{joinWorkDate,jdbcType=TIMESTAMP},
+        join_work_date = #{joinWorkDate,jdbcType=VARCHAR},
       </if>
       <if test="joinSchoolDate != null">
-        join_school_date = #{joinSchoolDate,jdbcType=TIMESTAMP},
+        join_school_date = #{joinSchoolDate,jdbcType=VARCHAR},
       </if>
       <if test="employeeOrigin != null">
         employee_origin = #{employeeOrigin,jdbcType=VARCHAR},
@@ -509,20 +509,20 @@
     update info
     set name = #{name,jdbcType=VARCHAR},
       old_name = #{oldName,jdbcType=VARCHAR},
-      sex = #{sex,jdbcType=INTEGER},
+      sex = #{sex,jdbcType=VARCHAR},
       work_number = #{workNumber,jdbcType=VARCHAR},
       nationality = #{nationality,jdbcType=VARCHAR},
       id_card_type = #{idCardType,jdbcType=VARCHAR},
       id_card_number = #{idCardNumber,jdbcType=CHAR},
-      birth_date = #{birthDate,jdbcType=TIMESTAMP},
+      birth_date = #{birthDate,jdbcType=VARCHAR},
       native_place = #{nativePlace,jdbcType=VARCHAR},
       native_heath = #{nativeHeath,jdbcType=VARCHAR},
       nation = #{nation,jdbcType=VARCHAR},
       political_outlook = #{politicalOutlook,jdbcType=VARCHAR},
       marital_status = #{maritalStatus,jdbcType=VARCHAR},
       health_status = #{healthStatus,jdbcType=VARCHAR},
-      join_work_date = #{joinWorkDate,jdbcType=TIMESTAMP},
-      join_school_date = #{joinSchoolDate,jdbcType=TIMESTAMP},
+      join_work_date = #{joinWorkDate,jdbcType=VARCHAR},
+      join_school_date = #{joinSchoolDate,jdbcType=VARCHAR},
       employee_origin = #{employeeOrigin,jdbcType=VARCHAR},
       margin_structure = #{marginStructure,jdbcType=VARCHAR},
       work_type = #{workType,jdbcType=VARCHAR},

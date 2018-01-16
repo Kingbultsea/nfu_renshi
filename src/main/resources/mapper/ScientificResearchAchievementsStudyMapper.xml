@@ -7,7 +7,7 @@
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="is_representativeness" jdbcType="VARCHAR" property="isRepresentativeness" />
     <result column="self_role" jdbcType="VARCHAR" property="selfRole" />
-    <result column="report_time" jdbcType="TIMESTAMP" property="reportTime" />
+    <result column="report_time" jdbcType="VARCHAR" property="reportTime" />
     <result column="entrusting_party" jdbcType="VARCHAR" property="entrustingParty" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -117,7 +117,7 @@
       self_role, report_time, entrusting_party
       )
     values (#{father,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{isRepresentativeness,jdbcType=VARCHAR}, 
-      #{selfRole,jdbcType=VARCHAR}, #{reportTime,jdbcType=TIMESTAMP}, #{entrustingParty,jdbcType=VARCHAR}
+      #{selfRole,jdbcType=VARCHAR}, #{reportTime,jdbcType=VARCHAR}, #{entrustingParty,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="cn.nfsysu.renshi.domain.ScientificResearchAchievementsStudy">
@@ -159,7 +159,7 @@
         #{selfRole,jdbcType=VARCHAR},
       </if>
       <if test="reportTime != null">
-        #{reportTime,jdbcType=TIMESTAMP},
+        #{reportTime,jdbcType=VARCHAR},
       </if>
       <if test="entrustingParty != null">
         #{entrustingParty,jdbcType=VARCHAR},
@@ -191,7 +191,7 @@
         self_role = #{record.selfRole,jdbcType=VARCHAR},
       </if>
       <if test="record.reportTime != null">
-        report_time = #{record.reportTime,jdbcType=TIMESTAMP},
+        report_time = #{record.reportTime,jdbcType=VARCHAR},
       </if>
       <if test="record.entrustingParty != null">
         entrusting_party = #{record.entrustingParty,jdbcType=VARCHAR},
@@ -208,7 +208,7 @@
       title = #{record.title,jdbcType=VARCHAR},
       is_representativeness = #{record.isRepresentativeness,jdbcType=VARCHAR},
       self_role = #{record.selfRole,jdbcType=VARCHAR},
-      report_time = #{record.reportTime,jdbcType=TIMESTAMP},
+      report_time = #{record.reportTime,jdbcType=VARCHAR},
       entrusting_party = #{record.entrustingParty,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -230,7 +230,7 @@
         self_role = #{selfRole,jdbcType=VARCHAR},
       </if>
       <if test="reportTime != null">
-        report_time = #{reportTime,jdbcType=TIMESTAMP},
+        report_time = #{reportTime,jdbcType=VARCHAR},
       </if>
       <if test="entrustingParty != null">
         entrusting_party = #{entrustingParty,jdbcType=VARCHAR},
@@ -244,7 +244,7 @@
       title = #{title,jdbcType=VARCHAR},
       is_representativeness = #{isRepresentativeness,jdbcType=VARCHAR},
       self_role = #{selfRole,jdbcType=VARCHAR},
-      report_time = #{reportTime,jdbcType=TIMESTAMP},
+      report_time = #{reportTime,jdbcType=VARCHAR},
       entrusting_party = #{entrustingParty,jdbcType=VARCHAR}
     where Id = #{id,jdbcType=INTEGER}
   </update>

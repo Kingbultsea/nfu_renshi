@@ -8,7 +8,7 @@
     <result column="is_representativeness" jdbcType="VARCHAR" property="isRepresentativeness" />
     <result column="certificate_number" jdbcType="VARCHAR" property="certificateNumber" />
     <result column="self_role" jdbcType="VARCHAR" property="selfRole" />
-    <result column="award_time" jdbcType="TIMESTAMP" property="awardTime" />
+    <result column="award_time" jdbcType="VARCHAR" property="awardTime" />
     <result column="validity_period" jdbcType="VARCHAR" property="validityPeriod" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -119,7 +119,7 @@
       certificate_number, self_role, award_time, 
       validity_period)
     values (#{father,jdbcType=INTEGER}, #{certificateName,jdbcType=VARCHAR}, #{isRepresentativeness,jdbcType=VARCHAR}, 
-      #{certificateNumber,jdbcType=VARCHAR}, #{selfRole,jdbcType=VARCHAR}, #{awardTime,jdbcType=TIMESTAMP}, 
+      #{certificateNumber,jdbcType=VARCHAR}, #{selfRole,jdbcType=VARCHAR}, #{awardTime,jdbcType=VARCHAR}, 
       #{validityPeriod,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="cn.nfsysu.renshi.domain.ScientificResearchAchievementsMedicine">
@@ -167,7 +167,7 @@
         #{selfRole,jdbcType=VARCHAR},
       </if>
       <if test="awardTime != null">
-        #{awardTime,jdbcType=TIMESTAMP},
+        #{awardTime,jdbcType=VARCHAR},
       </if>
       <if test="validityPeriod != null">
         #{validityPeriod,jdbcType=VARCHAR},
@@ -202,7 +202,7 @@
         self_role = #{record.selfRole,jdbcType=VARCHAR},
       </if>
       <if test="record.awardTime != null">
-        award_time = #{record.awardTime,jdbcType=TIMESTAMP},
+        award_time = #{record.awardTime,jdbcType=VARCHAR},
       </if>
       <if test="record.validityPeriod != null">
         validity_period = #{record.validityPeriod,jdbcType=VARCHAR},
@@ -220,7 +220,7 @@
       is_representativeness = #{record.isRepresentativeness,jdbcType=VARCHAR},
       certificate_number = #{record.certificateNumber,jdbcType=VARCHAR},
       self_role = #{record.selfRole,jdbcType=VARCHAR},
-      award_time = #{record.awardTime,jdbcType=TIMESTAMP},
+      award_time = #{record.awardTime,jdbcType=VARCHAR},
       validity_period = #{record.validityPeriod,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -245,7 +245,7 @@
         self_role = #{selfRole,jdbcType=VARCHAR},
       </if>
       <if test="awardTime != null">
-        award_time = #{awardTime,jdbcType=TIMESTAMP},
+        award_time = #{awardTime,jdbcType=VARCHAR},
       </if>
       <if test="validityPeriod != null">
         validity_period = #{validityPeriod,jdbcType=VARCHAR},
@@ -260,7 +260,7 @@
       is_representativeness = #{isRepresentativeness,jdbcType=VARCHAR},
       certificate_number = #{certificateNumber,jdbcType=VARCHAR},
       self_role = #{selfRole,jdbcType=VARCHAR},
-      award_time = #{awardTime,jdbcType=TIMESTAMP},
+      award_time = #{awardTime,jdbcType=VARCHAR},
       validity_period = #{validityPeriod,jdbcType=VARCHAR}
     where Id = #{id,jdbcType=INTEGER}
   </update>

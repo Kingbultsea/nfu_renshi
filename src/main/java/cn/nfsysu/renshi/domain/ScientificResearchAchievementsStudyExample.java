@@ -1,7 +1,6 @@
 package cn.nfsysu.renshi.domain;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class ScientificResearchAchievementsStudyExample {
@@ -465,52 +464,62 @@ public class ScientificResearchAchievementsStudyExample {
             return (Criteria) this;
         }
 
-        public Criteria andReportTimeEqualTo(Date value) {
+        public Criteria andReportTimeEqualTo(String value) {
             addCriterion("report_time =", value, "reportTime");
             return (Criteria) this;
         }
 
-        public Criteria andReportTimeNotEqualTo(Date value) {
+        public Criteria andReportTimeNotEqualTo(String value) {
             addCriterion("report_time <>", value, "reportTime");
             return (Criteria) this;
         }
 
-        public Criteria andReportTimeGreaterThan(Date value) {
+        public Criteria andReportTimeGreaterThan(String value) {
             addCriterion("report_time >", value, "reportTime");
             return (Criteria) this;
         }
 
-        public Criteria andReportTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andReportTimeGreaterThanOrEqualTo(String value) {
             addCriterion("report_time >=", value, "reportTime");
             return (Criteria) this;
         }
 
-        public Criteria andReportTimeLessThan(Date value) {
+        public Criteria andReportTimeLessThan(String value) {
             addCriterion("report_time <", value, "reportTime");
             return (Criteria) this;
         }
 
-        public Criteria andReportTimeLessThanOrEqualTo(Date value) {
+        public Criteria andReportTimeLessThanOrEqualTo(String value) {
             addCriterion("report_time <=", value, "reportTime");
             return (Criteria) this;
         }
 
-        public Criteria andReportTimeIn(List<Date> values) {
+        public Criteria andReportTimeLike(String value) {
+            addCriterion("report_time like", value, "reportTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andReportTimeNotLike(String value) {
+            addCriterion("report_time not like", value, "reportTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andReportTimeIn(List<String> values) {
             addCriterion("report_time in", values, "reportTime");
             return (Criteria) this;
         }
 
-        public Criteria andReportTimeNotIn(List<Date> values) {
+        public Criteria andReportTimeNotIn(List<String> values) {
             addCriterion("report_time not in", values, "reportTime");
             return (Criteria) this;
         }
 
-        public Criteria andReportTimeBetween(Date value1, Date value2) {
+        public Criteria andReportTimeBetween(String value1, String value2) {
             addCriterion("report_time between", value1, value2, "reportTime");
             return (Criteria) this;
         }
 
-        public Criteria andReportTimeNotBetween(Date value1, Date value2) {
+        public Criteria andReportTimeNotBetween(String value1, String value2) {
             addCriterion("report_time not between", value1, value2, "reportTime");
             return (Criteria) this;
         }

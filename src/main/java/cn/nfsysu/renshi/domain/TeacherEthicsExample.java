@@ -1,7 +1,6 @@
 package cn.nfsysu.renshi.domain;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class TeacherEthicsExample {
@@ -395,52 +394,62 @@ public class TeacherEthicsExample {
             return (Criteria) this;
         }
 
-        public Criteria andHonorTimeEqualTo(Date value) {
+        public Criteria andHonorTimeEqualTo(String value) {
             addCriterion("honor_time =", value, "honorTime");
             return (Criteria) this;
         }
 
-        public Criteria andHonorTimeNotEqualTo(Date value) {
+        public Criteria andHonorTimeNotEqualTo(String value) {
             addCriterion("honor_time <>", value, "honorTime");
             return (Criteria) this;
         }
 
-        public Criteria andHonorTimeGreaterThan(Date value) {
+        public Criteria andHonorTimeGreaterThan(String value) {
             addCriterion("honor_time >", value, "honorTime");
             return (Criteria) this;
         }
 
-        public Criteria andHonorTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andHonorTimeGreaterThanOrEqualTo(String value) {
             addCriterion("honor_time >=", value, "honorTime");
             return (Criteria) this;
         }
 
-        public Criteria andHonorTimeLessThan(Date value) {
+        public Criteria andHonorTimeLessThan(String value) {
             addCriterion("honor_time <", value, "honorTime");
             return (Criteria) this;
         }
 
-        public Criteria andHonorTimeLessThanOrEqualTo(Date value) {
+        public Criteria andHonorTimeLessThanOrEqualTo(String value) {
             addCriterion("honor_time <=", value, "honorTime");
             return (Criteria) this;
         }
 
-        public Criteria andHonorTimeIn(List<Date> values) {
+        public Criteria andHonorTimeLike(String value) {
+            addCriterion("honor_time like", value, "honorTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andHonorTimeNotLike(String value) {
+            addCriterion("honor_time not like", value, "honorTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andHonorTimeIn(List<String> values) {
             addCriterion("honor_time in", values, "honorTime");
             return (Criteria) this;
         }
 
-        public Criteria andHonorTimeNotIn(List<Date> values) {
+        public Criteria andHonorTimeNotIn(List<String> values) {
             addCriterion("honor_time not in", values, "honorTime");
             return (Criteria) this;
         }
 
-        public Criteria andHonorTimeBetween(Date value1, Date value2) {
+        public Criteria andHonorTimeBetween(String value1, String value2) {
             addCriterion("honor_time between", value1, value2, "honorTime");
             return (Criteria) this;
         }
 
-        public Criteria andHonorTimeNotBetween(Date value1, Date value2) {
+        public Criteria andHonorTimeNotBetween(String value1, String value2) {
             addCriterion("honor_time not between", value1, value2, "honorTime");
             return (Criteria) this;
         }
