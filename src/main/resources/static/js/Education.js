@@ -12,7 +12,7 @@ function changeVueAPI(elementId,api,keys){
     var q =new Vue({
         el:'#'+elementId,
         data:{
-            url: "http://9i8vcz.natappfree.cc/api/common/",
+            url: "/api/common/",
             data:{},
             databack: {},
             id:'1',

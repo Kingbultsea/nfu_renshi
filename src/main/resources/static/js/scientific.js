@@ -10,7 +10,7 @@ function scientificAPI(elementId,api,keys){
     var q =new Vue({
         el:'#'+elementId,
         data:{
-            url: "http://jjs5dg.natappfree.cc/api/scientific/",
+            url: "/api/scientific/",
             data:{},
             databack: {},
             id:'1',
@@ -209,8 +209,8 @@ var options = ['是','否'];
     f.common("项目批准号o", "approveNumber");
     f.common("学科领域o", "subjectAreas");
     f.common("项目经费额度o", "funding");
-    f.time("开始年月o", "beginTime");var yui =['beginTime'];
-    f.time("结束年月o", "endTime");var yui =['endTime'];
+    f.time("开始年月o", "beginTime");var yui =['beginTime','endTime'];
+    f.time("结束年月o", "endTime");
 var options = ['01-独立完成','02-项目主要负责人','03-项目主要参加者','99-其他'];
     f.select(options,"本人角色",'selfRole');
 var options = ['1-1','2-2','3-3','0-无','9-其他'];

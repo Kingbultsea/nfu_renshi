@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-var a;
+var login;
 var id;
 var x;
  $(document).ready(function(){
@@ -11,14 +11,18 @@ var x;
      
  });
  
+ function login_true(){
+     login.show = true;
+ }
+ 
  function login(){
-      a = new Vue({
+      login = new Vue({
          el:'#login',
          data:{
              username:'sky',
              password:'123',
              get:null,
-             url:'http://jjs5dg.natappfree.cc/admin/login',
+             url:'/admin/login',
              show:false
          },
          methods:{

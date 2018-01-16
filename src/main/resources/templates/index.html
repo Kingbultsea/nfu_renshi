@@ -8,7 +8,7 @@ and open the template in the editor.
     <head>
         <title>中山大学南方学院教职工管理系统</title>
         <meta charset="UTF-8">
-        <meta http-equiv="Access-Control-Allow-Origin" content="*">
+        
         
         
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -118,12 +118,7 @@ and open the template in the editor.
                               document.getElementById('选项头').innerHTML = asdsda;
                         });
                         
-                         $('.大选项').mouseover(function(){
-                            $(this).css('height','100px');
-                        });
-                        $('.大选项').mouseleave(function(){
-                             $(this).css('height','40px');
-                        });
+                       
                         $('.d1 p').click(function(){
                            var asdsda = $(this).html();
                               
@@ -247,6 +242,9 @@ function 判断那些内容是否是空(){
 
          <script src="js/scientific.js"></script><!--scient-->
          
+         <script src="js/text.js"></script><!--text-->
+         
+         <script src="js/form.js"></script>
          
     </head>
    
@@ -259,7 +257,7 @@ function 判断那些内容是否是空(){
   <p class='选择_1' style="padding-left:10px;font-size: 14px;" value="audi">A3</p >
   <p class='选择_1' style="padding-left:10px;font-size: 14px;" value="ccs">A4</p>
                         </div> <input class="input呗"><img style="width:16px;height:16px;position: relative;right:68px;top:6px;z-index: 2;" alt="提交" src="http://wx2.sinaimg.cn/mw690/006L3XM8gy1fk68e5kwcuj30he0hemxh.jpg">
-                        <span style="position:relative;top:3px;color:rgb(255,255,255);float: right;padding-right: 10px;width:100px;"><span  >Login</span><span style="position:relative;right:-20px;">Register</span></span>
+                        <span style="position:relative;top:3px;color:rgb(255,255,255);float: right;padding-right: 10px;width:100px;"><span   onclick="login_true()">Login</span><span style="position:relative;right:-20px;">Register</span></span>
                                     
                                 
                                 
@@ -282,9 +280,9 @@ function 判断那些内容是否是空(){
                 <div style="position:absolute;right:0%;">
                     
               <!--  <div  style="width: 148px;height:40px;float: left;background-color: #ccccff;text-align: center"><span style=" text-align: center;position: relative;top:10px;">A</span></div> -->
-                <div class='大选项 d1' style="width: 148px;height:40px;float: left;text-align: center;z-index: 999;position: relative;overflow: hidden"><span style=" text-align: center;position: relative;top:10px;">大选项</span><p style=" text-align: center;position: relative;top:20px;" onclick="that.a()">A2</p><p style=" text-align: center;position: relative;top:20px;">A3</p><p style=" text-align: center;position: relative;top:20px;">A4</p></div>
-                <div class='大选项 d2' style="width: 148px;height:40px;float: left;text-align: center;z-index: 999;position: relative;overflow: hidden"><span style=" text-align: center;position: relative;top:10px;">大选项</span><p style=" text-align: center;position: relative;top:20px;" >A2</p><p style=" text-align: center;position: relative;top:20px;">A3</p><p style=" text-align: center;position: relative;top:20px;">A4</p></div>
-                <div class='大选项 d3' style="width: 148px;height:40px;float: left;text-align: center;z-index: 999;position: relative;overflow: hidden"><span style=" text-align: center;position: relative;top:10px;">大选项</span><p style=" text-align: center;position: relative;top:20px;">A2</p><p style=" text-align: center;position: relative;top:20px;">A3</p><p style=" text-align: center;position: relative;top:20px;">A4</p></div>
+                <div class='大选项 d1' style="width: 148px;height:40px;float: left;text-align: center;z-index: 999;position: relative;overflow: hidden"><span style=" text-align: center;position: relative;top:10px;">大选项</span></div>
+                <div class='大选项 d2' style="width: 148px;height:40px;float: left;text-align: center;z-index: 999;position: relative;overflow: hidden"><span style=" text-align: center;position: relative;top:10px;">大选项</span></div>
+                <div class='大选项 d3' style="width: 148px;height:40px;float: left;text-align: center;z-index: 999;position: relative;overflow: hidden"><span style=" text-align: center;position: relative;top:10px;">大选项</span></div>
                 
                 </div>
             </div>
