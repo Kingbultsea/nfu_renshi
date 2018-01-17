@@ -19,19 +19,28 @@ function scientificAPI(elementId,api,keys){
         },
         methods:{
             get:function(){
+                
                 var a  = this.url +'get'+api;
                 this.$http.get(a, {params: {id:1}}).then(function (response) {
-                    this.data = $.parseJSON(response.bodyText);
+                    
+                    if(response){
+                       this.data = $.parseJSON(response.bodyText); 
+                    }else{
+                        this.add(this.id);
+                    }
+                    
                 },function (e) {alert('');});
             },
             back:function(){
-            
-                      for( var q =0;q<key.length ; q++ ){
+            if(key !== 'ff'){
+                                  for( var q =0;q<key.length ; q++ ){
             var date = new Date(document.getElementById(key[q]).value);//可以传时间，也可以不传，不传的话就是默认的当前时间  
             
             var time3 = Date.parse(date);  
             this.data[ key[q] ] = time3;
-        }
+        }  
+            }
+  
                 
                 var a  = this.url +'update'+api;
                 this.databack = this.data;
@@ -62,7 +71,7 @@ function scientificAPI(elementId,api,keys){
         
     });
     
-   
+   q.get();
     
 }
 
@@ -126,10 +135,8 @@ var options = ['是','否'];
     f.common("证书批号*", "certificateNumber");
 var options = ['10-独立完成','20-第一完成人','30-第二完成人','99-其他'];
     f.select(options,"本人角色*",'selfRole');
-    f.time("颁发时间*", "awardTime");var yui =['awardTime'];
-    f.time("有效期*", "validityPeriod");var yui =['validityPeriod'];
-    
-
+    f.time("颁发时间*", "awardTime");var yui =['awardTime','validityPeriod'];
+    f.time("有效期*", "validityPeriod");
     
     f.start2();
     scientificAPI('Medicine', '-medicine-by-id');
